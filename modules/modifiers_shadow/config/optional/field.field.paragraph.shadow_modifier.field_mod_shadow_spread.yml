@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_shadow_spread
+    - paragraphs.paragraphs_type.shadow_modifier
+id: paragraph.shadow_modifier.field_mod_shadow_spread
+field_name: field_mod_shadow_spread
+entity_type: paragraph
+bundle: shadow_modifier
+label: 'Shadow Spread'
+description: 'Define the shadow spread.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: px
+field_type: integer

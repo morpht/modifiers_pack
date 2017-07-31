@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_video
+    - media_entity.bundle.video
+    - paragraphs.paragraphs_type.video_bg_modifier
+id: paragraph.video_bg_modifier.field_mod_video
+field_name: field_mod_video
+entity_type: paragraph
+bundle: video_bg_modifier
+label: 'Video background'
+description: 'Select a video to use as a background. YouTube is currently the only supported provider.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

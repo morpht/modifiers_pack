@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: corners_modifier
+label: 'Corners Modifier'
+behavior_plugins: {  }

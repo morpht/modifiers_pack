@@ -1,0 +1,87 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.custom_colors_modifier.field_mod_background_color_val
+    - field.field.paragraph.custom_colors_modifier.field_mod_h_background_color_val
+    - field.field.paragraph.custom_colors_modifier.field_mod_h_link_color_val
+    - field.field.paragraph.custom_colors_modifier.field_mod_h_text_color_val
+    - field.field.paragraph.custom_colors_modifier.field_mod_link_color_val
+    - field.field.paragraph.custom_colors_modifier.field_mod_media_query
+    - field.field.paragraph.custom_colors_modifier.field_mod_text_color_val
+    - field.field.paragraph.custom_colors_modifier.field_mod_transition_duration
+    - paragraphs.paragraphs_type.custom_colors_modifier
+  module:
+    - color_field
+id: paragraph.custom_colors_modifier.default
+targetEntityType: paragraph
+bundle: custom_colors_modifier
+mode: default
+content:
+  field_mod_background_color_val:
+    weight: 6
+    settings:
+      placeholder_color: '#000000'
+      placeholder_opacity: '1'
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_mod_h_background_color_val:
+    weight: 10
+    settings:
+      placeholder_color: '#000000'
+      placeholder_opacity: '1'
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_mod_h_link_color_val:
+    weight: 12
+    settings:
+      placeholder_color: '#000000'
+      placeholder_opacity: '1'
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_mod_h_text_color_val:
+    weight: 11
+    settings:
+      placeholder_color: '#000000'
+      placeholder_opacity: '1'
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_mod_link_color_val:
+    weight: 8
+    settings:
+      placeholder_color: '#000000'
+      placeholder_opacity: '1'
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_mod_media_query:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: '(min-width: 768px)'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mod_text_color_val:
+    weight: 7
+    settings:
+      placeholder_color: '#000000'
+      placeholder_opacity: '1'
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_mod_transition_duration:
+    weight: 13
+    settings:
+      placeholder: '0,3'
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

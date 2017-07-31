@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.html_font_size_modifier.field_mod_fonts_base_size
+    - field.field.paragraph.html_font_size_modifier.field_mod_media_query
+    - paragraphs.paragraphs_type.html_font_size_modifier
+id: paragraph.html_font_size_modifier.default
+targetEntityType: paragraph
+bundle: html_font_size_modifier
+mode: default
+content:
+  field_mod_fonts_base_size:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mod_media_query:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  uid: true

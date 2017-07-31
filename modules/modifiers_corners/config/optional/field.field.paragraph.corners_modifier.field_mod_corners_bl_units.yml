@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_corners_bl_units
+    - paragraphs.paragraphs_type.corners_modifier
+  module:
+    - options
+id: paragraph.corners_modifier.field_mod_corners_bl_units
+field_name: field_mod_corners_bl_units
+entity_type: paragraph
+bundle: corners_modifier
+label: 'Bottom Left Units'
+description: 'The units for the bottom left size.'
+required: false
+translatable: false
+default_value:
+  -
+    value: px
+default_value_callback: ''
+settings: {  }
+field_type: list_string

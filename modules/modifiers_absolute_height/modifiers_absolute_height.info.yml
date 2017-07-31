@@ -1,0 +1,9 @@
+name: Absolute Height Modifier
+type: module
+description: Provides a Modifier to set the absolute height on an element.
+core: 8.x
+package: Modifiers
+dependencies:
+  - modifiers
+  - paragraphs
+  - options

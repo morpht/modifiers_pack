@@ -1,0 +1,15 @@
+parallax:
+  remote: https://github.com/pixelcog/parallax.js
+  version: 1.4.2
+  license:
+    name: MIT
+    url: https://github.com/pixelcog/parallax.js/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/parallax-js/parallax.min.js: {}
+  dependencies:
+    - core/jquery
+
+apply:
+  js:
+    js/modifiers_bg_parallax.apply.js: {}

@@ -1,0 +1,10 @@
+name: Fonts Modifier
+type: module
+description: Provides a Modifier to set the fonts on an element.
+core: 8.x
+package: Modifiers
+dependencies:
+  - modifiers
+  - paragraphs
+  - options
+  - link

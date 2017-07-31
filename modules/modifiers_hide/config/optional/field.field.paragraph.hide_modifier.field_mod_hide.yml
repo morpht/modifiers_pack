@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_hide
+    - paragraphs.paragraphs_type.hide_modifier
+id: paragraph.hide_modifier.field_mod_hide
+field_name: field_mod_hide
+entity_type: paragraph
+bundle: hide_modifier
+label: Hide
+description: 'Hide the element.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

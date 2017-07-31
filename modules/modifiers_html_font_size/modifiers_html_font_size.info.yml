@@ -1,0 +1,8 @@
+name: HTML Font Size Modifier
+type: module
+description: Provides a Modifier to set the HTML font size on an element.
+core: 8.x
+package: Modifiers
+dependencies:
+  - modifiers
+  - paragraphs

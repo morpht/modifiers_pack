@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_fonts_h4_transform
+    - paragraphs.paragraphs_type.fonts_modifier
+  module:
+    - options
+id: paragraph.fonts_modifier.field_mod_fonts_h4_transform
+field_name: field_mod_fonts_h4_transform
+entity_type: paragraph
+bundle: fonts_modifier
+label: 'H4 Transform'
+description: 'Define the H4 capitalization.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

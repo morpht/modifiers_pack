@@ -1,0 +1,11 @@
+name: Image Background Modifier
+type: module
+description: Provides a Modifier to set the image background on an element.
+core: 8.x
+package: Modifiers
+dependencies:
+  - modifiers
+  - paragraphs
+  - options
+  - media_entity
+  - media_entity_image

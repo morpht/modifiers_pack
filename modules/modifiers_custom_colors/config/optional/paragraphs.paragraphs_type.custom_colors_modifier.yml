@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: custom_colors_modifier
+label: 'Custom Colors Modifier'
+behavior_plugins: {  }

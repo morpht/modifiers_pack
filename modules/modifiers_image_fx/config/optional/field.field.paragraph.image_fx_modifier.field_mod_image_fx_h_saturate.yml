@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_image_fx_h_saturate
+    - paragraphs.paragraphs_type.image_fx_modifier
+id: paragraph.image_fx_modifier.field_mod_image_fx_h_saturate
+field_name: field_mod_image_fx_h_saturate
+entity_type: paragraph
+bundle: image_fx_modifier
+label: 'Hover Saturate'
+description: 'Define the amount of hover saturate effect: 0 (none) - 100 (unchanged) - 1000 (high saturation).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: !!float 1000
+  prefix: ''
+  suffix: '%'
+field_type: decimal

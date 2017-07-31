@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_bg_modifier.field_mod_media_query
+    - field.field.paragraph.video_bg_modifier.field_mod_video
+    - paragraphs.paragraphs_type.video_bg_modifier
+id: paragraph.video_bg_modifier.default
+targetEntityType: paragraph
+bundle: video_bg_modifier
+mode: default
+content:
+  field_mod_media_query:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mod_video:
+    weight: 0
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_h_link_color_val
+    - paragraphs.paragraphs_type.custom_colors_modifier
+  module:
+    - color_field
+id: paragraph.custom_colors_modifier.field_mod_h_link_color_val
+field_name: field_mod_h_link_color_val
+entity_type: paragraph
+bundle: custom_colors_modifier
+label: 'Hover Link Color'
+description: 'Pick the link hover color.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

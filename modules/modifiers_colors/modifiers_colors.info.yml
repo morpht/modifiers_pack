@@ -1,0 +1,10 @@
+name: Colors Modifier
+type: module
+description: Provides a Modifier to set the colors on an element.
+core: 8.x
+package: Modifiers
+dependencies:
+  - modifiers
+  - paragraphs
+  - taxonomy
+  - color_field

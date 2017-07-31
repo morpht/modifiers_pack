@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: parallax_bg_modifier
+label: 'Parallax Background Modifier'
+behavior_plugins: {  }

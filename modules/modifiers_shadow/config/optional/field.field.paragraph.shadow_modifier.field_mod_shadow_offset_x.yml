@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_shadow_offset_x
+    - paragraphs.paragraphs_type.shadow_modifier
+id: paragraph.shadow_modifier.field_mod_shadow_offset_x
+field_name: field_mod_shadow_offset_x
+entity_type: paragraph
+bundle: shadow_modifier
+label: 'Shadow Offset X'
+description: 'Define the X offset.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: px
+field_type: integer

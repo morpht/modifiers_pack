@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_shadow_blur
+    - paragraphs.paragraphs_type.shadow_modifier
+id: paragraph.shadow_modifier.field_mod_shadow_blur
+field_name: field_mod_shadow_blur
+entity_type: paragraph
+bundle: shadow_modifier
+label: 'Shadow Blur'
+description: 'Define the amount of blur.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: px
+field_type: decimal

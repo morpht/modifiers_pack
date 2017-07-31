@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_height_units
+    - paragraphs.paragraphs_type.absolute_height_modifier
+  module:
+    - options
+id: paragraph.absolute_height_modifier.field_mod_height_units
+field_name: field_mod_height_units
+entity_type: paragraph
+bundle: absolute_height_modifier
+label: Units
+description: 'Specify the units for the height.'
+required: false
+translatable: false
+default_value:
+  -
+    value: px
+default_value_callback: ''
+settings: {  }
+field_type: list_string

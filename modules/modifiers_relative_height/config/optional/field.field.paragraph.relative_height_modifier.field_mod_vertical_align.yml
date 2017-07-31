@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_vertical_align
+    - paragraphs.paragraphs_type.relative_height_modifier
+  module:
+    - options
+id: paragraph.relative_height_modifier.field_mod_vertical_align
+field_name: field_mod_vertical_align
+entity_type: paragraph
+bundle: relative_height_modifier
+label: 'Vertical Align'
+description: 'Vertically align the content.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: image_fx_modifier
+label: 'Image FX Modifier'
+behavior_plugins: {  }

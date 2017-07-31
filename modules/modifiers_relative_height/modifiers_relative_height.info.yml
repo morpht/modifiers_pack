@@ -1,0 +1,9 @@
+name: Relative Height Modifier
+type: module
+description: Provides a Modifier to set the relative height on an element.
+core: 8.x
+package: Modifiers
+dependencies:
+  - modifiers
+  - paragraphs
+  - options
