@@ -9,12 +9,16 @@
 
   ParallaxBgModifier.apply = function (selector, config) {
 
-    var defaultConfig = {
+    var pluginConfig = {
       zIndex: 0
     };
-    config.parallax = Object.assign(defaultConfig, config.parallax);
+    for (var property in config.parallax) {
+      if (config.parallax.hasOwnProperty(property)) {
+        pluginConfig[property] = config.parallax[property];
+      }
+    }
 
-    $(selector).parallax(config.parallax);
+    $(selector).parallax(pluginConfig);
 
     var slider = '.parallax-slider[src="' + config.parallax.imageSrc + '"]';
     var element = document.querySelector(slider);
