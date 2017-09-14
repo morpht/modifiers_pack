@@ -43,8 +43,8 @@ class AbsoluteHeightModifier extends ModifierPluginBase {
           'namespace' => 'AbsoluteHeightModifier',
           'callback' => 'apply',
           'selector' => $selector,
+          'media' => $media,
           'args' => [
-            'media' => $media,
             'height' => $config['height'],
           ],
         ];

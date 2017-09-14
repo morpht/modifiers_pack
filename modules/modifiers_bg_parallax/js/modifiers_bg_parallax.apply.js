@@ -7,26 +7,23 @@
 
   'use strict';
 
-  ParallaxBgModifier.apply = function (selector, config) {
+  ParallaxBgModifier.apply = function (selector, media, config) {
 
     var pluginConfig = {
+      imageSrc: (config.parallax !== undefined ? config.parallax : false),
+      speed: (config.speed !== undefined ? config.speed : 0.2),
       zIndex: 0
     };
-    for (var property in config.parallax) {
-      if (config.parallax.hasOwnProperty(property)) {
-        pluginConfig[property] = config.parallax[property];
-      }
-    }
 
     $(selector).parallax(pluginConfig);
 
-    var slider = '.parallax-slider[src="' + config.parallax.imageSrc + '"]';
+    var slider = '.parallax-slider[src="' + pluginConfig.imageSrc + '"]';
     var element = document.querySelector(slider);
 
-    toggle(element, config.media);
+    toggle(element, media);
 
     window.addEventListener('resize', function () {
-      toggle(element, config.media);
+      toggle(element, media);
     });
 
   };

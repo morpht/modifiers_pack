@@ -7,7 +7,7 @@
 
   'use strict';
 
-  VideoBgModifier.apply = function (selector, config) {
+  VideoBgModifier.apply = function (selector, media, config) {
 
     var element = document.querySelector(selector);
     var id = element.getAttribute('id');
@@ -49,10 +49,10 @@
 
     var wrapper = element.querySelector('.videojs-background-wrap');
 
-    toggle(wrapper, config.media);
+    toggle(wrapper, media);
 
     window.addEventListener('resize', function () {
-      toggle(wrapper, config.media);
+      toggle(wrapper, media);
     });
 
   };

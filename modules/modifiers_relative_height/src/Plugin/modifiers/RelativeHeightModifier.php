@@ -35,8 +35,8 @@ class RelativeHeightModifier extends ModifierPluginBase {
         'namespace' => 'RelativeHeightModifier',
         'callback' => 'apply',
         'selector' => $selector,
+        'media' => $media,
         'args' => [
-          'media' => $media,
           'ratio' => $config['relative_height'],
         ],
       ];
