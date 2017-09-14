@@ -4,8 +4,8 @@ description: Provides a Modifier to set the video background on an element.
 core: 8.x
 package: Modifiers
 dependencies:
-  - modifiers
-  - paragraphs
-  - media_entity
-  - video_embed_field
-  - video_embed_media
+  - modifiers:modifiers
+  - paragraphs:paragraphs
+  - media_entity:media_entity
+  - video_embed_field:video_embed_field
+  - video_embed_media:video_embed_media
