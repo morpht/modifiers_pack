@@ -11,7 +11,8 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "absolute_height_modifier",
  *   label = @Translation("Absolute Height Modifier"),
- *   description = @Translation("Provides a Modifier to set the absolute height on an element"),
+ *   description = @Translation("Provides a Modifier to set the absolute height
+ *   on an element"),
  * )
  */
 class AbsoluteHeightModifier extends ModifierPluginBase {
@@ -37,9 +38,11 @@ class AbsoluteHeightModifier extends ModifierPluginBase {
           case 'top':
             $css[$media][$selector][] = 'align-items:flex-start';
             break;
+
           case 'middle':
             $css[$media][$selector][] = 'align-items:center';
             break;
+
           case 'bottom':
             $css[$media][$selector][] = 'align-items:flex-end';
             break;

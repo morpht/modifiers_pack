@@ -33,9 +33,11 @@ class RelativeHeightModifier extends ModifierPluginBase {
           case 'top':
             $css[$media][$selector][] = 'align-items:flex-start';
             break;
+
           case 'middle':
             $css[$media][$selector][] = 'align-items:center';
             break;
+
           case 'bottom':
             $css[$media][$selector][] = 'align-items:flex-end';
             break;
