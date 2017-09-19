@@ -30,11 +30,9 @@ class ImageBgModifier extends ModifierPluginBase {
       if (!empty($config['image_style'])) {
 
         switch ($config['image_style']) {
-
           case 'stretch':
             $css[$media][$selector][] = 'background-size:cover';
             break;
-
           case 'no-repeat':
           case 'repeat':
           case 'repeat-x':
