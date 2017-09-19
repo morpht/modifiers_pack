@@ -11,8 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "absolute_height_modifier",
  *   label = @Translation("Absolute Height Modifier"),
- *   description = @Translation("Provides a Modifier to set the absolute height
- *   on an element"),
+ *   description = @Translation("Provides a Modifier to set the absolute height on an element"),
  * )
  */
 class AbsoluteHeightModifier extends ModifierPluginBase {
