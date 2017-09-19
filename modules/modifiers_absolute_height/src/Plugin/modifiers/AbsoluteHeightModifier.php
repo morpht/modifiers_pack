@@ -25,7 +25,6 @@ class AbsoluteHeightModifier extends ModifierPluginBase {
       $css = [];
       $libraries = [];
       $settings = [];
-      $attributes = [];
       $media = parent::getMediaQuery($config);
       $unit = 'px';
 
@@ -68,7 +67,7 @@ class AbsoluteHeightModifier extends ModifierPluginBase {
         $css[$media][$selector][] = 'height:' . $config['height'] . $unit;
       }
 
-      return new Modification($css, $libraries, $settings, $attributes);
+      return new Modification($css, $libraries, $settings);
     }
     return NULL;
   }

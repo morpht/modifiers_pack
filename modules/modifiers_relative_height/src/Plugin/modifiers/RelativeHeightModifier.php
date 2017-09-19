@@ -22,7 +22,6 @@ class RelativeHeightModifier extends ModifierPluginBase {
   public static function modification($selector, array $config) {
 
     if (!empty($config['relative_height'])) {
-      $attributes = [];
       $media = parent::getMediaQuery($config);
 
       if (!empty($config['vertical_align'])) {
@@ -57,7 +56,7 @@ class RelativeHeightModifier extends ModifierPluginBase {
       ];
       $css[$media][$selector][] = 'overflow:hidden';
 
-      return new Modification($css, $libraries, $settings, $attributes);
+      return new Modification($css, $libraries, $settings);
     }
     return NULL;
   }
