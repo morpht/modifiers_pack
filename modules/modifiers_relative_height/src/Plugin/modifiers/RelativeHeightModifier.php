@@ -26,7 +26,22 @@ class RelativeHeightModifier extends ModifierPluginBase {
       $media = parent::getMediaQuery($config);
 
       if (!empty($config['vertical_align'])) {
-        $attributes['class'][] = 'modifiers-vertical-align-' . $config['vertical_align'];
+        $css[$media][$selector][] = 'display:flex';
+
+        switch ($config['vertical_align']) {
+
+          case 'top':
+            $css[$media][$selector][] = 'align-items:flex-start';
+            break;
+
+          case 'middle':
+            $css[$media][$selector][] = 'align-items:center';
+            break;
+
+          case 'bottom':
+            $css[$media][$selector][] = 'align-items:flex-end';
+            break;
+        }
       }
       $libraries = [
         'modifiers_relative_height/apply',
