@@ -31,7 +31,9 @@ class AbsoluteHeightModifier extends ModifierPluginBase {
 
       if (!empty($config['vertical_align'])) {
         $css[$media][$selector][] = 'display:flex';
+
         switch ($config['vertical_align']) {
+
           case 'top':
             $css[$media][$selector][] = 'align-items:flex-start';
             break;
