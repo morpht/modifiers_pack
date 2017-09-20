@@ -19,7 +19,7 @@
     var video = document.createElement('video');
     video.setAttribute('id', id + '-bg');
     video.setAttribute('class', 'video-js vjs-default-skin');
-    element.after(video);
+    element.parentNode.insertBefore(video, element.nextSibling);
 
     switch (config.provider) {
 
