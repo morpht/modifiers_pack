@@ -19,6 +19,10 @@
     var video = document.createElement('video');
     video.setAttribute('id', id + '-bg');
     video.setAttribute('class', 'video-js vjs-default-skin');
+    video.setAttribute('autoplay', '');
+    video.setAttribute('loop', '');
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
     element.parentNode.insertBefore(video, element.nextSibling);
 
     switch (config.provider) {
@@ -36,7 +40,8 @@
             src: 'https://www.youtube.com/embed/' + config.video
           }],
           youtube: {
-            disablekb: 1
+            disablekb: 1,
+            playsinline: 1
           }
         };
         var configBackground = {
