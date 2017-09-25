@@ -10,6 +10,9 @@
   AbsoluteHeightModifier.apply = function (selector, media, config) {
 
     var element = document.querySelector(selector);
+    if (!element) {
+      return;
+    }
 
     setHeight(element, media, config.height);
 

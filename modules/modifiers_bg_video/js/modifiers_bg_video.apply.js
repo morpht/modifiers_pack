@@ -10,6 +10,9 @@
   VideoBgModifier.apply = function (selector, media, config) {
 
     var element = document.querySelector(selector);
+    if (!element) {
+      return;
+    }
     var id = element.getAttribute('id');
     if (!id) {
       id = selector.replace(/[^a-zA-Z0-9-_]/g, '_');
@@ -53,6 +56,9 @@
     }
 
     var wrapper = element.querySelector('.videojs-background-wrap');
+    if (!wrapper) {
+      return;
+    }
 
     toggle(wrapper, media);
 
