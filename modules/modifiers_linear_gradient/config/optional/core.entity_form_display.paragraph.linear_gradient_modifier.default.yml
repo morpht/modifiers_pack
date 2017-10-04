@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.linear_gradient_modifier.field_mod_l_gradient_colors
+    - field.field.paragraph.linear_gradient_modifier.field_mod_l_gradient_direction
+    - field.field.paragraph.linear_gradient_modifier.field_mod_media_query
+    - paragraphs.paragraphs_type.linear_gradient_modifier
+  module:
+    - color_field
+    - workbench_moderation
+id: paragraph.linear_gradient_modifier.default
+targetEntityType: paragraph
+bundle: linear_gradient_modifier
+mode: default
+content:
+  field_mod_l_gradient_colors:
+    weight: 0
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_mod_l_gradient_direction:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_mod_media_query:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
