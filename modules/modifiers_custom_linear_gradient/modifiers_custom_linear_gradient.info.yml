@@ -1,0 +1,10 @@
+name: Custom Linear Gradient Modifier
+type: module
+description: Provides a Modifier to set the background gradient on an element using custom color.
+core: 8.x
+package: Modifiers
+dependencies:
+  - modifiers
+  - paragraphs
+  - taxonomy
+  - color_field
