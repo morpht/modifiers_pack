@@ -8,7 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.custom_linear_gradient_modifier
   module:
     - color_field
-    - workbench_moderation
 id: paragraph.custom_linear_gradient_modifier.default
 targetEntityType: paragraph
 bundle: custom_linear_gradient_modifier

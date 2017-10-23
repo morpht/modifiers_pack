@@ -8,7 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.custom_linear_gradient_modifier
   module:
     - color_field
-    - ds
 id: paragraph.custom_linear_gradient_modifier.default
 targetEntityType: paragraph
 bundle: custom_linear_gradient_modifier
@@ -20,9 +19,7 @@ content:
     settings:
       format: hex
       opacity: '1'
-    third_party_settings:
-      ds:
-        ds_limit: ''
+    third_party_settings: {  }
     type: color_field_formatter_text
     region: content
   field_mod_cl_gradient_direction:

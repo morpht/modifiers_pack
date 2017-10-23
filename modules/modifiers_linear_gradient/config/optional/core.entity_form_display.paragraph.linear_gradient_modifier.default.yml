@@ -6,8 +6,6 @@ dependencies:
     - field.field.paragraph.linear_gradient_modifier.field_mod_l_gradient_direction
     - field.field.paragraph.linear_gradient_modifier.field_mod_media_query
     - paragraphs.paragraphs_type.linear_gradient_modifier
-  module:
-    - workbench_moderation
 id: paragraph.linear_gradient_modifier.default
 targetEntityType: paragraph
 bundle: linear_gradient_modifier
