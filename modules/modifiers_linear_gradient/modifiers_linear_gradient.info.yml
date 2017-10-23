@@ -1,0 +1,10 @@
+name: Linear Gradient Modifier
+type: module
+description: Provides a Modifier to set the background gradient on an element using colors from library.
+core: 8.x
+package: Modifiers
+dependencies:
+  - modifiers:modifiers
+  - paragraphs:paragraphs
+  - drupal:taxonomy
+  - color_field:color_field
