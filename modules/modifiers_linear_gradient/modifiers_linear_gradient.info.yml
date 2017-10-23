@@ -4,7 +4,7 @@ description: Provides a Modifier to set the background gradient on an element us
 core: 8.x
 package: Modifiers
 dependencies:
-  - modifiers
-  - paragraphs
-  - taxonomy
-  - color_field
+  - modifiers:modifiers
+  - paragraphs:paragraphs
+  - drupal:taxonomy
+  - color_field:color_field

@@ -3,8 +3,8 @@
 ## Overview
 This module implements a Modifier which allows you to use colors to set a 
 linear gradient. You can set multiple colors, they will be evenly distributed
- along a customizable direction. If only one color is provided it will be set
-  as background color.
+along a customizable direction. If only one color is provided it will be set
+as background color.
 
 Optionally you can set media queries and transition duration.
 

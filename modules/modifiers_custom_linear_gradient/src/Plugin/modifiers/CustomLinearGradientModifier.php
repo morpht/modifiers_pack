@@ -6,7 +6,7 @@ use Drupal\modifiers\Modification;
 use Drupal\modifiers\ModifierPluginBase;
 
 /**
- * Provides a Modifier to set the linear gradient on an element using custom colors.
+ * Provides a Modifier to set the linear gradient on an element.
  *
  * @Modifier(
  *   id = "custom_linear_gradient_modifier",
@@ -27,16 +27,19 @@ class CustomLinearGradientModifier extends ModifierPluginBase {
 
     if (!empty($config['cl_gradient_colors'])) {
       $attributes['class'][] = 'modifiers-has-background';
+      $direction = '';
+
       if (!empty($config['cl_gradient_direction'])) {
         $direction = $config['cl_gradient_direction'] . 'deg,';
       }
       // If there is only one color specified we replicate it in order to have
       // one color fill.
-      if (count($config['cl_gradient_colors']) == 1) {
+      if (count($config['cl_gradient_colors']) === 1) {
         $css[$media][$selector][] = 'background:' . $config['cl_gradient_colors'][0];
       }
       else {
-        $css[$media][$selector][] = 'background:linear-gradient(' . $direction . implode(',', $config['cl_gradient_colors']) . ')';
+        $css[$media][$selector][] = 'background:linear-gradient('
+          . $direction . implode(',', $config['cl_gradient_colors']) . ')';
       }
     }
 
