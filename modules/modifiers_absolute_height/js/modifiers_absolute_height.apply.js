@@ -7,14 +7,17 @@
 
   'use strict';
 
-  AbsoluteHeightModifier.apply = function (selector, config) {
+  AbsoluteHeightModifier.apply = function (selector, media, config) {
 
     var element = document.querySelector(selector);
+    if (!element) {
+      return;
+    }
 
-    setHeight(element, config.media, config.height);
+    setHeight(element, media, config.height);
 
     window.addEventListener('resize', function () {
-      setHeight(element, config.media, config.height);
+      setHeight(element, media, config.height);
     });
 
   };

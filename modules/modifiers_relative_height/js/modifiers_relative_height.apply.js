@@ -7,14 +7,17 @@
 
   'use strict';
 
-  RelativeHeightModifier.apply = function (selector, config) {
+  RelativeHeightModifier.apply = function (selector, media, config) {
 
     var element = document.querySelector(selector);
+    if (!element) {
+      return;
+    }
 
-    setHeight(element, config.media, config.ratio);
+    setHeight(element, media, config.ratio);
 
     window.addEventListener('resize', function () {
-      setHeight(element, config.media, config.ratio);
+      setHeight(element, media, config.ratio);
     });
 
   };

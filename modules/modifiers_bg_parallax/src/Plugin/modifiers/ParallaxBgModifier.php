@@ -32,15 +32,13 @@ class ParallaxBgModifier extends ModifierPluginBase {
         'namespace' => 'ParallaxBgModifier',
         'callback' => 'apply',
         'selector' => $selector,
+        'media' => $media,
         'args' => [
-          'media' => $media,
-          'parallax' => [
-            'imageSrc' => $config['parallax'],
-          ],
+          'parallax' => $config['parallax'],
         ],
       ];
       if (!empty($config['parallax_speed'])) {
-        $settings['args']['parallax']['speed'] = $config['parallax_speed'];
+        $settings['args']['speed'] = $config['parallax_speed'];
       }
       $attributes['class'][] = 'modifiers-has-background';
 
