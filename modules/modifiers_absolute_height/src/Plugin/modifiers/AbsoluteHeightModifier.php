@@ -25,12 +25,26 @@ class AbsoluteHeightModifier extends ModifierPluginBase {
       $css = [];
       $libraries = [];
       $settings = [];
-      $attributes = [];
       $media = parent::getMediaQuery($config);
       $unit = 'px';
 
       if (!empty($config['vertical_align'])) {
-        $attributes['class'][] = 'modifiers-vertical-align-' . $config['vertical_align'];
+        $css[$media][$selector][] = 'display:flex';
+
+        switch ($config['vertical_align']) {
+
+          case 'top':
+            $css[$media][$selector][] = 'align-items:flex-start';
+            break;
+
+          case 'middle':
+            $css[$media][$selector][] = 'align-items:center';
+            break;
+
+          case 'bottom':
+            $css[$media][$selector][] = 'align-items:flex-end';
+            break;
+        }
       }
       if (!empty($config['height_units'])) {
         $unit = $config['height_units'];
@@ -43,8 +57,8 @@ class AbsoluteHeightModifier extends ModifierPluginBase {
           'namespace' => 'AbsoluteHeightModifier',
           'callback' => 'apply',
           'selector' => $selector,
+          'media' => $media,
           'args' => [
-            'media' => $media,
             'height' => $config['height'],
           ],
         ];
@@ -53,7 +67,7 @@ class AbsoluteHeightModifier extends ModifierPluginBase {
         $css[$media][$selector][] = 'height:' . $config['height'] . $unit;
       }
 
-      return new Modification($css, $libraries, $settings, $attributes);
+      return new Modification($css, $libraries, $settings);
     }
     return NULL;
   }

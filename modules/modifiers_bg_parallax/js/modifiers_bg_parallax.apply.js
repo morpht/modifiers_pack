@@ -7,33 +7,65 @@
 
   'use strict';
 
-  ParallaxBgModifier.apply = function (selector, config) {
+  ParallaxBgModifier.apply = function (selector, media, config) {
 
-    var defaultConfig = {
+    var element = document.querySelector(selector);
+    if (!element) {
+      return;
+    }
+
+    var pluginConfig = {
+      imageSrc: (config.parallax !== undefined ? config.parallax : false),
+      speed: (config.speed !== undefined ? config.speed : 0.2),
       zIndex: 0
     };
-    config.parallax = Object.assign(defaultConfig, config.parallax);
 
-    $(selector).parallax(config.parallax);
+    $(selector).parallax(pluginConfig);
 
-    var slider = '.parallax-slider[src="' + config.parallax.imageSrc + '"]';
-    var element = document.querySelector(slider);
+    var slider = '.parallax-slider[src="' + pluginConfig.imageSrc + '"]';
+    slider = document.querySelector(slider);
+    if (slider) {
 
-    toggle(element, config.media);
+      toggleDesktop(slider, media);
 
-    window.addEventListener('resize', function () {
-      toggle(element, config.media);
-    });
+      window.addEventListener('resize', function () {
+        toggleDesktop(slider, media);
+      });
+    }
+    else {
+
+      var image = element.style.backgroundImage;
+      if (!image) {
+        return;
+      }
+
+      toggleMobile(element, media, image);
+
+      window.addEventListener('resize', function () {
+        toggleMobile(element, media, image);
+      });
+    }
 
   };
 
-  function toggle(element, media) {
+  function toggleDesktop(element, media) {
 
     if (window.matchMedia(media).matches) {
       element.style.display = '';
     }
     else {
       element.style.display = 'none';
+    }
+
+  }
+
+  function toggleMobile(element, media, image) {
+
+    if (window.matchMedia(media).matches) {
+      element.style.backgroundImage = image;
+    }
+    else {
+      element.style.backgroundImage = '';
     }
 
   }
