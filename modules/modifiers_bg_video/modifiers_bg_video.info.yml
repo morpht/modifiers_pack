@@ -8,4 +8,4 @@ dependencies:
   - paragraphs:paragraphs
   - media_entity:media_entity
   - video_embed_field:video_embed_field
-  - video_embed_media:video_embed_media
+  - video_embed_field:video_embed_media
