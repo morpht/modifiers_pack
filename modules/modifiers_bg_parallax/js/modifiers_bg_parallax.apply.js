@@ -15,8 +15,8 @@
     }
 
     var pluginConfig = {
-      imageSrc: (config.parallax !== undefined ? config.parallax : false),
-      speed: (config.speed !== undefined ? config.speed : 0.2),
+      imageSrc: (typeof config.parallax !== 'undefined' ? config.parallax : false),
+      speed: (typeof config.speed !== 'undefined' ? config.speed : 0.2),
       zIndex: 0
     };
 
