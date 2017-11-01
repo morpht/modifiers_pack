@@ -40,8 +40,12 @@ class ShadowModifierTest extends UnitTestCase {
       ],
     ];
     $expected_attributes_1 = [
-      'class' => [
-        'modifiers-has-background',
+      'all' => [
+        '.selector' => [
+          'class' => [
+            'modifiers-has-background',
+          ],
+        ],
       ],
     ];
     $this->assertEquals($expected_css_1, $actual_1->getCss());
@@ -90,8 +94,12 @@ class ShadowModifierTest extends UnitTestCase {
       ],
     ];
     $expected_attributes_2 = [
-      'class' => [
-        'modifiers-has-background',
+      'all' => [
+        '.selector' => [
+          'class' => [
+            'modifiers-has-background',
+          ],
+        ],
       ],
     ];
     $this->assertEquals($expected_css_2, $actual_2->getCss());

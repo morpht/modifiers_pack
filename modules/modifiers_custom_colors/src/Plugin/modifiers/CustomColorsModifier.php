@@ -27,7 +27,7 @@ class CustomColorsModifier extends ModifierPluginBase {
 
     if (!empty($config['background_color_val'])) {
       $css[$media][$selector][] = 'background-color:' . $config['background_color_val'];
-      $attributes['class'][] = 'modifiers-has-background';
+      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
     }
     if (!empty($config['text_color_val'])) {
       $css[$media][$selector][] = 'color:' . $config['text_color_val'];
@@ -38,7 +38,7 @@ class CustomColorsModifier extends ModifierPluginBase {
     if (!empty($config['h_background_color_val'])) {
       $css[$media][$selector . ':hover'][] = 'background-color:' . $config['h_background_color_val'];
       if (empty($config['background_color_val'])) {
-        $attributes['class'][] = 'modifiers-has-background';
+        $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
       }
     }
     if (!empty($config['h_link_color_val'])) {

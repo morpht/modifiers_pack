@@ -26,7 +26,7 @@ class CustomLinearGradientModifier extends ModifierPluginBase {
     $media = parent::getMediaQuery($config);
 
     if (!empty($config['cl_gradient_colors'])) {
-      $attributes['class'][] = 'modifiers-has-background';
+      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
       $direction = '';
 
       if (!empty($config['cl_gradient_direction'])) {

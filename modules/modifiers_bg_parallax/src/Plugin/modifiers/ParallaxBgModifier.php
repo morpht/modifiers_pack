@@ -40,7 +40,7 @@ class ParallaxBgModifier extends ModifierPluginBase {
       if (!empty($config['parallax_speed'])) {
         $settings['args']['speed'] = $config['parallax_speed'];
       }
-      $attributes['class'][] = 'modifiers-has-background';
+      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
       return new Modification([], $libraries, $settings, $attributes);
     }

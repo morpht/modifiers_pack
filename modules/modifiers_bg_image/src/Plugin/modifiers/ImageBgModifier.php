@@ -25,7 +25,7 @@ class ImageBgModifier extends ModifierPluginBase {
       $media = parent::getMediaQuery($config);
 
       $css[$media][$selector][] = 'background-image:url("' . $config['image'] . '")';
-      $attributes['class'][] = 'modifiers-has-background';
+      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
       if (!empty($config['image_style'])) {
 
