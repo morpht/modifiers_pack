@@ -21,40 +21,40 @@ content:
   field_mod_background_color_val:
     weight: 6
     settings:
-      placeholder_color: '#000000'
-      placeholder_opacity: '1'
+      placeholder_color: ''
+      placeholder_opacity: ''
     third_party_settings: {  }
     type: color_field_widget_default
     region: content
   field_mod_h_background_color_val:
     weight: 10
     settings:
-      placeholder_color: '#000000'
-      placeholder_opacity: '1'
+      placeholder_color: ''
+      placeholder_opacity: ''
     third_party_settings: {  }
     type: color_field_widget_default
     region: content
   field_mod_h_link_color_val:
     weight: 12
     settings:
-      placeholder_color: '#000000'
-      placeholder_opacity: '1'
+      placeholder_color: ''
+      placeholder_opacity: ''
     third_party_settings: {  }
     type: color_field_widget_default
     region: content
   field_mod_h_text_color_val:
     weight: 11
     settings:
-      placeholder_color: '#000000'
-      placeholder_opacity: '1'
+      placeholder_color: ''
+      placeholder_opacity: ''
     third_party_settings: {  }
     type: color_field_widget_default
     region: content
   field_mod_link_color_val:
     weight: 8
     settings:
-      placeholder_color: '#000000'
-      placeholder_opacity: '1'
+      placeholder_color: ''
+      placeholder_opacity: ''
     third_party_settings: {  }
     type: color_field_widget_default
     region: content
@@ -62,22 +62,22 @@ content:
     weight: 14
     settings:
       size: 60
-      placeholder: '(min-width: 768px)'
+      placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
   field_mod_text_color_val:
     weight: 7
     settings:
-      placeholder_color: '#000000'
-      placeholder_opacity: '1'
+      placeholder_color: ''
+      placeholder_opacity: ''
     third_party_settings: {  }
     type: color_field_widget_default
     region: content
   field_mod_transition_duration:
     weight: 13
     settings:
-      placeholder: '0,3'
+      placeholder: ''
     third_party_settings: {  }
     type: number
     region: content

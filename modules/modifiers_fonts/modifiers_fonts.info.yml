@@ -4,7 +4,7 @@ description: Provides a Modifier to set the fonts on an element.
 core: 8.x
 package: Modifiers
 dependencies:
-  - modifiers
-  - paragraphs
-  - options
-  - link
+  - modifiers:modifiers
+  - paragraphs:paragraphs
+  - drupal:options
+  - drupal:link

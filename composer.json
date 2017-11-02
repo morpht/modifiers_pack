@@ -1,0 +1,22 @@
+{
+  "name": "drupal/modifiers_pack",
+  "description": "Provides a set of basic Modifier plugins.",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/modifiers_pack",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/modifiers_pack",
+    "source": "https://github.com/morpht/modifiers_pack"
+  },
+  "require": {
+    "drupal/color_field": "~2.0",
+    "drupal/media_entity": "~1.0",
+    "drupal/media_entity_image": "~1.0",
+    "drupal/modifiers": "~1.0",
+    "drupal/paragraphs": "~1.0",
+    "drupal/video_embed_field": "~1.0",
+    "matthojo/videojs-background": "~1.0",
+    "pixelcog/parallax-js": "~1.4",
+    "videojs/videojs-youtube": "~2.3"
+  }
+}

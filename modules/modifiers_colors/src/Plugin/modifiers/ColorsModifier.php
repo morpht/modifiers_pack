@@ -34,10 +34,12 @@ class ColorsModifier extends ModifierPluginBase {
     }
     if (!empty($config['link_color'])) {
       $css[$media][$selector . ' a'][] = 'color:' . $config['link_color'];
-      $css[$media][$selector . ' .button:before'][] = 'color:' . $config['link_color'];
     }
     if (!empty($config['h_background_color'])) {
       $css[$media][$selector . ':hover'][] = 'background-color:' . $config['h_background_color'];
+      if (empty($config['background_color'])) {
+        $attributes['class'][] = 'modifiers-has-background';
+      }
     }
     if (!empty($config['h_link_color'])) {
       $css[$media][$selector . ' a:hover'][] = 'color:' . $config['h_link_color'];

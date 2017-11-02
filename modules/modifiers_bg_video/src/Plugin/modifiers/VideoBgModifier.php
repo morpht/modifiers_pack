@@ -25,8 +25,6 @@ class VideoBgModifier extends ModifierPluginBase {
       list($provider, $input) = explode(':', $config['video'], 2);
     }
     if (!empty($provider) && !empty($input)) {
-      $libraries = [];
-
       switch ($provider) {
 
         case 'youtube':
@@ -59,9 +57,8 @@ class VideoBgModifier extends ModifierPluginBase {
           'namespace' => 'VideoBgModifier',
           'callback' => 'apply',
           'selector' => $selector,
-          'args' => [
-            'media' => $media,
-          ] + $args,
+          'media' => $media,
+          'args' => $args,
         ];
         $attributes['class'][] = 'modifiers-has-background';
 

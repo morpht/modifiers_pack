@@ -7,9 +7,12 @@
 
   'use strict';
 
-  VideoBgModifier.apply = function (selector, config) {
+  VideoBgModifier.apply = function (selector, media, config) {
 
     var element = document.querySelector(selector);
+    if (!element) {
+      return;
+    }
     var id = element.getAttribute('id');
     if (!id) {
       id = selector.replace(/[^a-zA-Z0-9-_]/g, '_');
@@ -19,7 +22,11 @@
     var video = document.createElement('video');
     video.setAttribute('id', id + '-bg');
     video.setAttribute('class', 'video-js vjs-default-skin');
-    element.after(video);
+    video.setAttribute('autoplay', '');
+    video.setAttribute('loop', '');
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    element.parentNode.insertBefore(video, element.nextSibling);
 
     switch (config.provider) {
 
@@ -36,7 +43,8 @@
             src: 'https://www.youtube.com/embed/' + config.video
           }],
           youtube: {
-            disablekb: 1
+            disablekb: 1,
+            playsinline: 1
           }
         };
         var configBackground = {
@@ -48,11 +56,14 @@
     }
 
     var wrapper = element.querySelector('.videojs-background-wrap');
+    if (!wrapper) {
+      return;
+    }
 
-    toggle(wrapper, config.media);
+    toggle(wrapper, media);
 
     window.addEventListener('resize', function () {
-      toggle(wrapper, config.media);
+      toggle(wrapper, media);
     });
 
   };
