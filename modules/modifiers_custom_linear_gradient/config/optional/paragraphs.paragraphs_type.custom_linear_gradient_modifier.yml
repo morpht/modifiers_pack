@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: custom_linear_gradient_modifier
+label: 'Custom Linear Gradient Modifier'
+behavior_plugins: {  }

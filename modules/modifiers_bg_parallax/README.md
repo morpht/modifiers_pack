@@ -13,6 +13,46 @@ Optionally you can set media queries.
 3. It will create a new media bundle of type Image (if it doesn't exist yet).
 4. Add this Paragraph bundle to a field_modifiers field on an entity (Block or
 Paragraph) or onto a field on a Look.
+5. Install required library by one of these 2 options:
+
+### A. Library installation (manual)
+1. Download [Parallax.js](https://github.com/pixelcog/parallax.js) library
+(version 1.4.2 is recommended).
+2. Place unpacked library in your libraries folder.
+
+### B. Library installation (composer)
+1. Copy the following into your project's composer.json file.
+    ```
+    "repositories": [
+      {
+        "type": "package",
+        "package": {
+          "name": "pixelcog/parallax-js",
+          "version": "1.4.2",
+          "dist": {
+            "type": "zip",
+            "url": "https://github.com/pixelcog/parallax.js/archive/v1.4.2.zip"
+          },
+          "require": {
+            "composer/installers": "~1.0"
+          },
+          "type": "drupal-library"
+        }
+      }
+    ]
+    ```
+2. Ensure you have following mapping inside your composer.json.
+    ```
+    "extra": {
+      "installer-paths": {
+        "libraries/{$name}": ["type:drupal-library"]
+      }
+    }
+    ```
+3. Run following command to download required libraries.
+    ```
+    composer require pixelcog/parallax-js
+    ```
 
 ### Optional steps for better user experience
 1. Use a paragraph Preview view mode on Form display.
