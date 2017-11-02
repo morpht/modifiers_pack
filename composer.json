@@ -14,47 +14,6 @@
     "drupal/media_entity_image": "~1.0",
     "drupal/modifiers": "~1.0",
     "drupal/paragraphs": "~1.0",
-    "drupal/video_embed_field": "~1.0",
-    "matthojo/videojs-background": "~1.0",
-    "pixelcog/parallax-js": "~1.4",
-    "videojs/videojs-youtube": "~2.3"
-  },
-  "repositories": [
-    {
-      "type": "package",
-      "package": {
-        "name": "matthojo/videojs-background",
-        "version": "1.0.7",
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/matthojo/videojs-Background/archive/v1.0.7.zip"
-        },
-        "type": "drupal-library"
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "pixelcog/parallax-js",
-        "version": "1.4.2",
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/pixelcog/parallax.js/archive/v1.4.2.zip"
-        },
-        "type": "drupal-library"
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "videojs/videojs-youtube",
-        "version": "2.3.2",
-        "dist": {
-          "type": "zip",
-          "url": "https://github.com/videojs/videojs-youtube/archive/v2.3.2.zip"
-        },
-        "type": "drupal-library"
-      }
-    }
-  ]
+    "drupal/video_embed_field": "~1.0"
+  }
 }
