@@ -33,8 +33,12 @@ class ParallaxBgModifierTest extends UnitTestCase {
       ],
     ];
     $expected_attributes_1 = [
-      'class' => [
-        'modifiers-has-background',
+      'all' => [
+        '.selector' => [
+          'class' => [
+            'modifiers-has-background',
+          ],
+        ],
       ],
     ];
     $this->assertEmpty($actual_1->getCss());
@@ -63,8 +67,12 @@ class ParallaxBgModifierTest extends UnitTestCase {
       ],
     ];
     $expected_attributes_2 = [
-      'class' => [
-        'modifiers-has-background',
+      'all' => [
+        '.selector' => [
+          'class' => [
+            'modifiers-has-background',
+          ],
+        ],
       ],
     ];
     $this->assertEmpty($actual_2->getCss());

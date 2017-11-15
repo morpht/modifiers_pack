@@ -95,7 +95,7 @@ class ShadowModifier extends ModifierPluginBase {
     }
 
     if (!empty($css)) {
-      $attributes['class'][] = 'modifiers-has-background';
+      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
       return new Modification($css, [], [], $attributes);
     }

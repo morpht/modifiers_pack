@@ -60,7 +60,7 @@ class VideoBgModifier extends ModifierPluginBase {
           'media' => $media,
           'args' => $args,
         ];
-        $attributes['class'][] = 'modifiers-has-background';
+        $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
         return new Modification($css, $libraries, $settings, $attributes);
       }

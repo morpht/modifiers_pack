@@ -26,7 +26,7 @@ class LinearGradientModifier extends ModifierPluginBase {
     $media = parent::getMediaQuery($config);
 
     if (!empty($config['l_gradient_colors'])) {
-      $attributes['class'][] = 'modifiers-has-background';
+      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
       $direction = '';
 
       if (!empty($config['l_gradient_direction'])) {

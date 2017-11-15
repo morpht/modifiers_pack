@@ -4,6 +4,6 @@ description: Provides a Modifier to set the relative height on an element.
 core: 8.x
 package: Modifiers
 dependencies:
-  - modifiers:modifiers
+  - modifiers:modifiers (>=8.x-1.0-alpha2)
   - paragraphs:paragraphs
   - drupal:options
