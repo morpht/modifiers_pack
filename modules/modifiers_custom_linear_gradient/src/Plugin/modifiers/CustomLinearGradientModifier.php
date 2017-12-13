@@ -41,10 +41,6 @@ class CustomLinearGradientModifier extends ModifierPluginBase {
         $css[$media][$selector][] = 'background:linear-gradient('
           . $direction . implode(',', $config['cl_gradient_colors']) . ')';
       }
-    }
-
-    if (!empty($css) || !empty($attributes)) {
-
       return new Modification($css, [], [], $attributes);
     }
     return NULL;
