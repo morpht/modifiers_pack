@@ -1,0 +1,27 @@
+uuid: 738072bc-4fb8-49a8-b83a-88eb1a969175
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_r_gradient_position
+    - paragraphs.paragraphs_type.radial_gradient_modifier
+id: paragraph.radial_gradient_modifier.field_mod_r_gradient_position
+field_name: field_mod_r_gradient_position
+entity_type: paragraph
+bundle: radial_gradient_modifier
+label: 'Radial Gradient Position'
+description: 'The position of the gradient.'
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 50
+  -
+    value: !!float 50
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: '%'
+field_type: decimal
