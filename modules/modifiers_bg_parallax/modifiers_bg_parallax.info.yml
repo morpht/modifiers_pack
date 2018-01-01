@@ -8,3 +8,4 @@ dependencies:
   - paragraphs:paragraphs
   - drupal:options
   - media_entity:media_entity
+  - media_entity_image:media_entity_image
