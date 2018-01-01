@@ -27,7 +27,7 @@ Paragraph) or onto a field on a Look.
       {
         "type": "package",
         "package": {
-          "name": "pixelcog/parallax-js",
+          "name": "pixelcog/parallax.js",
           "version": "1.4.2",
           "dist": {
             "type": "zip",
@@ -51,7 +51,7 @@ Paragraph) or onto a field on a Look.
     ```
 3. Run following command to download required libraries.
     ```
-    composer require pixelcog/parallax-js
+    composer require pixelcog/parallax.js
     ```
 
 ### Optional steps for better user experience
