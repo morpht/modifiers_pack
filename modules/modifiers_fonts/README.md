@@ -1,4 +1,4 @@
-# Font modifier
+# Font Modifier
 
 ## Overview
 This module implements a Modifier which allows you to set font(s) via link

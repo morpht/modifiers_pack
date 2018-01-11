@@ -1,4 +1,4 @@
-# HTML font size modifier
+# HTML Font Size Modifier
 
 ## Overview
 This module implements a Modifier which allows you to set base font size for

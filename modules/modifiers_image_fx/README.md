@@ -1,4 +1,4 @@
-# Image FX modifier
+# Image FX Modifier
 
 ## Overview
 This module implements a Modifier which allows you to set CSS effects for

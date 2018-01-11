@@ -1,4 +1,4 @@
-# Relative height modifier
+# Relative Height Modifier
 
 ## Overview
 This module implements a Modifier which allows you to choose relative height

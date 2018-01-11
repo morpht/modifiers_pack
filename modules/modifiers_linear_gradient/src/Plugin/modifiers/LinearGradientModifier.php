@@ -32,8 +32,7 @@ class LinearGradientModifier extends ModifierPluginBase {
       if (!empty($config['l_gradient_direction'])) {
         $direction = $config['l_gradient_direction'] . 'deg,';
       }
-      // If there is only one color specified we replicate it in order to have
-      // one color fill.
+      // If there is only one color specified we use single color fill.
       if (count($config['l_gradient_colors']) === 1) {
         $css[$media][$selector][] = 'background:' . $config['l_gradient_colors'][0];
       }

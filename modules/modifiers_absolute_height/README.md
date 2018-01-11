@@ -1,4 +1,4 @@
-# Absolute height modifier
+# Absolute Height Modifier
 
 ## Overview
 This module implements a Modifier which allows you to set the exact height.
