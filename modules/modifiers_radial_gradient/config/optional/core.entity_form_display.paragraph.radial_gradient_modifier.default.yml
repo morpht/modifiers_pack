@@ -1,0 +1,57 @@
+uuid: 6708a52b-e7e2-4dad-9d0d-d5cf19dd2e71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.radial_gradient_modifier.field_mod_media_query
+    - field.field.paragraph.radial_gradient_modifier.field_mod_r_gradient_colors
+    - field.field.paragraph.radial_gradient_modifier.field_mod_r_gradient_position
+    - field.field.paragraph.radial_gradient_modifier.field_mod_r_gradient_shape
+    - field.field.paragraph.radial_gradient_modifier.field_mod_r_gradient_size
+    - paragraphs.paragraphs_type.radial_gradient_modifier
+  module:
+    - workbench_moderation
+_core:
+  default_config_hash: 8LbvP11q2nMzRQQk-BGkTmWe3hAfPxwyavXR4U0TcRU
+id: paragraph.radial_gradient_modifier.default
+targetEntityType: paragraph
+bundle: radial_gradient_modifier
+mode: default
+content:
+  field_mod_media_query:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mod_r_gradient_colors:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mod_r_gradient_position:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_mod_r_gradient_shape:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mod_r_gradient_size:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

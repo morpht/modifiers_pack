@@ -1,0 +1,23 @@
+uuid: ab9a84fc-5beb-4eb3-a542-53215e376b74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_r_gradient_shape
+    - paragraphs.paragraphs_type.radial_gradient_modifier
+  module:
+    - options
+id: paragraph.radial_gradient_modifier.field_mod_r_gradient_shape
+field_name: field_mod_r_gradient_shape
+entity_type: paragraph
+bundle: radial_gradient_modifier
+label: 'Radial Gradient Shape'
+description: 'The gradient''s shape.'
+required: false
+translatable: false
+default_value:
+  -
+    value: ellipse
+default_value_callback: ''
+settings: {  }
+field_type: list_string

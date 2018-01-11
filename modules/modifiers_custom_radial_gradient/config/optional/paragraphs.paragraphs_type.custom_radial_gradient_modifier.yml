@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: custom_radial_gradient_modifier
+label: 'Custom Radial Gradient Modifier'
+behavior_plugins: {  }

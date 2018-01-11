@@ -15,6 +15,34 @@ class CustomLinearGradientModifierTest extends UnitTestCase {
    * @covers ::modification
    */
   public function testModification() {
+    // Gradient has only one color.
+    $actual_0 = CustomLinearGradientModifier::modification('.selector', [
+      'cl_gradient_colors' => [
+        'rgba(219,112,147,0.1)',
+      ],
+    ]);
+    $expected_css_0 = [
+      'all' => [
+        '.selector' => [
+          'background:rgba(219,112,147,0.1)',
+        ],
+      ],
+    ];
+    $expected_attributes_0 = [
+      'all' => [
+        '.selector' => [
+          'class' => [
+            'modifiers-has-background',
+          ],
+        ],
+      ],
+    ];
+    $this->assertEquals($expected_css_0, $actual_0->getCss());
+    $this->assertEmpty($actual_0->getLibraries());
+    $this->assertEmpty($actual_0->getSettings());
+    $this->assertEquals($expected_attributes_0, $actual_0->getAttributes());
+    $this->assertEmpty($actual_0->getLinks());
+
     // Custom gradient direction is empty.
     $actual_1 = CustomLinearGradientModifier::modification('.selector', [
       'cl_gradient_colors' => [

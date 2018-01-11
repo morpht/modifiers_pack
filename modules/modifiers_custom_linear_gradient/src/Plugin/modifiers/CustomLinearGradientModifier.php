@@ -21,12 +21,8 @@ class CustomLinearGradientModifier extends ModifierPluginBase {
    */
   public static function modification($selector, array $config) {
 
-    $css = [];
-    $attributes = [];
-    $media = parent::getMediaQuery($config);
-
     if (!empty($config['cl_gradient_colors'])) {
-      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
+      $media = parent::getMediaQuery($config);
       $direction = '';
 
       if (!empty($config['cl_gradient_direction'])) {
@@ -40,9 +36,7 @@ class CustomLinearGradientModifier extends ModifierPluginBase {
         $css[$media][$selector][] = 'background:linear-gradient('
           . $direction . implode(',', $config['cl_gradient_colors']) . ')';
       }
-    }
-
-    if (!empty($css) || !empty($attributes)) {
+      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
       return new Modification($css, [], [], $attributes);
     }

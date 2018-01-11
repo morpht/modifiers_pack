@@ -1,0 +1,9 @@
+name: Custom Radial Gradient Modifier
+type: module
+description: Provides a Modifier to set the radial gradient on an element using custom colors.
+core: 8.x
+package: Modifiers
+dependencies:
+  - modifiers:modifiers (>=8.x-1.0-alpha2)
+  - paragraphs:paragraphs
+  - color_field:color_field
