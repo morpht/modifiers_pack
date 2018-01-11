@@ -1,7 +1,7 @@
 # Video Background Modifier
 
 ## Overview
-This module implements a Modifier which allows you to set background video. 
+This module implements a Modifier which allows you to set background video.
 Currently the only supported provider is YouTube, but other providers
 can be added if there is support for them in VideoJS.
 

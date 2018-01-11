@@ -5,7 +5,7 @@
 This module provides an starter set of Modifiers which will be helpful for
 basic and common modification use cases.
 
-Each of the module can have its own set of requirements and dependencies. Look 
+Each of the module can have its own set of requirements and dependencies. Look
 at their respective readme and info files.
 
 ## How to Use Modifiers

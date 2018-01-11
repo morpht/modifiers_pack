@@ -1,8 +1,8 @@
 # Parallax Background Modifier
 
 ## Overview
-This module implements a Modifier which allows you to set background image with 
-configurable Parallax speed. 
+This module implements a Modifier which allows you to set background image with
+configurable Parallax speed.
 
 Optionally you can set media queries.
 

@@ -1,7 +1,7 @@
 # Image Background Modifier
 
 ## Overview
-This module implements a Modifier which allows you to set background image. 
+This module implements a Modifier which allows you to set background image.
 
 Optionally you can set media queries.
 

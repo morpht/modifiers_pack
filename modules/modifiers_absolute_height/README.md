@@ -1,10 +1,10 @@
 # Absolute height modifier
 
 ## Overview
-This module implements a Modifier which allows you to set the exact height. 
-Multiple units are provided via select box. 
+This module implements a Modifier which allows you to set the exact height.
+Multiple units are provided via select box.
 
-Optionally you can set media queries and make the content to be aligned 
+Optionally you can set media queries and make the content to be aligned
 vertically.
 
 ## Installation
