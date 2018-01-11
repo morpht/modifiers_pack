@@ -49,14 +49,14 @@ class RadialGradientModifierTest extends UnitTestCase {
         'rgba(219,112,147,0.1)',
         'rgba(255,20,147,0.2)',
       ],
-      'r_gradient_position' => [0 => '50.00', 1 => '50.00'],
+      'r_gradient_position' => ['40.00', '60.00'],
       'r_gradient_shape' => 'ellipse',
       'r_gradient_size' => 'farthest-corner',
     ]);
     $expected_css_2 = [
       'all' => [
         '.selector' => [
-          'background:radial-gradient(ellipse farthest-corner at 50.00% 50.00%, rgba(219,112,147,0.1),rgba(255,20,147,0.2))',
+          'background:radial-gradient(ellipse farthest-corner at 40.00% 60.00%,rgba(219,112,147,0.1),rgba(255,20,147,0.2))',
         ],
       ],
     ];

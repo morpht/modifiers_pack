@@ -21,25 +21,36 @@ class RadialGradientModifier extends ModifierPluginBase {
    */
   public static function modification($selector, array $config) {
 
-    $css = [];
-    $attributes = [];
-    $media = parent::getMediaQuery($config);
-
     if (!empty($config['r_gradient_colors'])) {
-      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
+      $media = parent::getMediaQuery($config);
+      $shape = 'ellipse';
+      $size = 'farthest-corner';
+      $position_x = '50';
+      $position_y = '50';
 
-      // If there is only one color specified we replicate it in order to have
-      // one color fill.
+      if (!empty($config['r_gradient_shape'])) {
+        $shape = $config['r_gradient_shape'];
+      }
+      if (!empty($config['r_gradient_size'])) {
+        $size = $config['r_gradient_size'];
+      }
+      if (!empty($config['r_gradient_position'][0])) {
+        $position_x = $config['r_gradient_position'][0];
+      }
+      if (!empty($config['r_gradient_position'][1])) {
+        $position_y = $config['r_gradient_position'][1];
+      }
+      // If there is only one color specified we use single color fill.
       if (count($config['r_gradient_colors']) === 1) {
         $css[$media][$selector][] = 'background:' . $config['r_gradient_colors'][0];
       }
       else {
         $css[$media][$selector][] = 'background:radial-gradient('
-          . $config['r_gradient_shape'] . ' ' . $config['r_gradient_size']
-          . ' at ' . $config['r_gradient_position'][0] . '% '
-          . $config['r_gradient_position'][1] . '%, '
+          . $shape . ' ' . $size . ' at ' . $position_x . '% ' . $position_y . '%,'
           . implode(',', $config['r_gradient_colors']) . ')';
       }
+      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
+
       return new Modification($css, [], [], $attributes);
     }
     return NULL;
