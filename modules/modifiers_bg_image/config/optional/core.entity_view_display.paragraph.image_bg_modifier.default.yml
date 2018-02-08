@@ -2,12 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.image_bg_modifier.field_mod_bgi_color_val
     - field.field.paragraph.image_bg_modifier.field_mod_image
     - field.field.paragraph.image_bg_modifier.field_mod_image_style
     - field.field.paragraph.image_bg_modifier.field_mod_media_query
     - image.style.thumbnail
     - paragraphs.paragraphs_type.image_bg_modifier
   module:
+    - color_field
     - media_entity
     - options
 id: paragraph.image_bg_modifier.default
@@ -15,6 +17,15 @@ targetEntityType: paragraph
 bundle: image_bg_modifier
 mode: default
 content:
+  field_mod_bgi_color_val:
+    weight: 2
+    label: inline
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_mod_image:
     weight: 1
     label: inline
@@ -25,14 +36,14 @@ content:
     type: media_thumbnail
     region: content
   field_mod_image_style:
-    weight: 2
+    weight: 3
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_mod_media_query:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       link_to_entity: false

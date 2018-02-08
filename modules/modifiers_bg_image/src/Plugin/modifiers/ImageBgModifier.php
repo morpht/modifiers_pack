@@ -44,6 +44,10 @@ class ImageBgModifier extends ModifierPluginBase {
         }
       }
 
+      if (!empty($config['bgi_color_val'])) {
+        $css['(max-width:768px)'][$selector][] = 'background:' . $config['bgi_color_val'];
+      }
+
       return new Modification($css, [], [], $attributes);
     }
     return NULL;
