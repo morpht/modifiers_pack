@@ -14,7 +14,9 @@
       return;
     }
 
-    if (window.matchMedia('(max-width:768px)').matches && config.image !== 'undefined') {
+    // iOS devices do not display the video. We will serve an image to them.
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (iOS !== false && config.image !== 'undefined') {
       var image = 'url("' + config.image + '")';
       element.style.backgroundSize = 'cover';
 
