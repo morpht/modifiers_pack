@@ -42,6 +42,9 @@ class VideoBgModifier extends ModifierPluginBase {
       if (!empty($args)) {
         $media = parent::getMediaQuery($config);
 
+        if (!empty($config['bgv_image'])) {
+          $args['image'] = $config['bgv_image'];
+        }
         $css[$media][$selector][] = 'position:relative';
         $css[$media][$selector . ' .videojs-background-wrap'][] = 'position:absolute;'
           . 'overflow:hidden;width:100%;height:100%;top:0;left:0;z-index:-998';
