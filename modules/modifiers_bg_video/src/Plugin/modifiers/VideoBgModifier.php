@@ -21,6 +21,9 @@ class VideoBgModifier extends ModifierPluginBase {
    */
   public static function modification($selector, array $config) {
 
+    if (!empty($config['bgv_color_val'])) {
+      $css['all'][$selector][] = 'background-color:' . $config['bgv_color_val'];
+    }
     if (!empty($config['video'])) {
       list($provider, $input) = explode(':', $config['video'], 2);
     }

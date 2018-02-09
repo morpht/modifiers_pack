@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.video_bg_modifier.field_mod_bgv_color_val
     - field.field.paragraph.video_bg_modifier.field_mod_bgv_image
     - field.field.paragraph.video_bg_modifier.field_mod_media_query
     - field.field.paragraph.video_bg_modifier.field_mod_video
@@ -11,6 +12,15 @@ targetEntityType: paragraph
 bundle: video_bg_modifier
 mode: default
 content:
+  field_mod_bgv_color_val:
+    weight: 3
+    label: inline
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_mod_bgv_image:
     weight: 2
     label: inline
@@ -20,7 +30,7 @@ content:
     type: entity_reference_label
     region: content
   field_mod_media_query:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       link_to_entity: false
