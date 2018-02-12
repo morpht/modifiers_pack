@@ -28,7 +28,7 @@ class ImageBgModifier extends ModifierPluginBase {
       $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
       if (!empty($config['bgi_color_val'])) {
-        $css['(max-width:768px)'][$selector][] = 'background-color:' . $config['bgi_color_val'];
+        $css['all'][$selector][] = 'background-color:' . $config['bgi_color_val'];
       }
 
       if (!empty($config['image_style'])) {
