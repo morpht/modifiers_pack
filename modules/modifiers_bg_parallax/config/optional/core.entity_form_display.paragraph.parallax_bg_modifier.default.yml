@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.parallax_bg_modifier.field_mod_bgp_color_val
     - field.field.paragraph.parallax_bg_modifier.field_mod_media_query
     - field.field.paragraph.parallax_bg_modifier.field_mod_parallax
     - field.field.paragraph.parallax_bg_modifier.field_mod_parallax_speed
@@ -11,9 +12,17 @@ targetEntityType: paragraph
 bundle: parallax_bg_modifier
 mode: default
 content:
+  field_mod_bgp_color_val:
+    weight: 2
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
   field_mod_media_query:
     type: string_textfield
-    weight: 2
+    weight: 3
     region: content
     settings:
       size: 60
