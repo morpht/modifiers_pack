@@ -40,13 +40,6 @@ class ParallaxBgModifier extends ModifierPluginBase {
       if (!empty($config['parallax_speed'])) {
         $settings['args']['speed'] = floatval($config['parallax_speed']);
       }
-      if (!empty($config['bgp_color_val'])) {
-        $css['all'][$selector][] = 'background-color:' . $config['bgp_color_val'];
-        if (substr($selector, 0, 4) === 'html') {
-          $selector = str_replace('html', 'html.js', $selector);
-        }
-        $css['all'][$selector][] = 'background:none';
-      }
       $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
       return new Modification([], $libraries, $settings, $attributes);
