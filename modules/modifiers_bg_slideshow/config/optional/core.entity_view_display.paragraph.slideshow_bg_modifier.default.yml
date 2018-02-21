@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow_bg_modifier.field_mod_bgs_delay
+    - field.field.paragraph.slideshow_bg_modifier.field_mod_bgs_images
+    - field.field.paragraph.slideshow_bg_modifier.field_mod_bgs_trans_duration
+    - field.field.paragraph.slideshow_bg_modifier.field_mod_bgs_trans_timing
+    - paragraphs.paragraphs_type.slideshow_bg_modifier
+  module:
+    - options
+id: paragraph.slideshow_bg_modifier.default
+targetEntityType: paragraph
+bundle: slideshow_bg_modifier
+mode: default
+content:
+  field_mod_bgs_delay:
+    weight: 1
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_mod_bgs_images:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_mod_bgs_trans_duration:
+    type: number_integer
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_mod_bgs_trans_timing:
+    type: list_default
+    weight: 3
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

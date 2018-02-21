@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_mod_bgs_trans_timing
+field_name: field_mod_bgs_trans_timing
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ease
+      label: ease
+    -
+      value: linear
+      label: linear
+    -
+      value: ease-in
+      label: ease-in
+    -
+      value: ease-out
+      label: ease-out
+    -
+      value: ease-in-out
+      label: ease-in-out
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
