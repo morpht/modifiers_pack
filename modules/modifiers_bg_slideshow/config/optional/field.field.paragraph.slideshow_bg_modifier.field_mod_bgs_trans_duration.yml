@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_bgs_trans_duration
+    - paragraphs.paragraphs_type.slideshow_bg_modifier
+id: paragraph.slideshow_bg_modifier.field_mod_bgs_trans_duration
+field_name: field_mod_bgs_trans_duration
+entity_type: paragraph
+bundle: slideshow_bg_modifier
+label: 'Transition duration'
+description: 'Define the transition duration in milliseconds. Default: "500".'
+required: true
+translatable: false
+default_value:
+  -
+    value: 500
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ms
+field_type: integer

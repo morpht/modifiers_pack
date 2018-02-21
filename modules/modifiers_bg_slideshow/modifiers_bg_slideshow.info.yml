@@ -1,0 +1,8 @@
+name: Background Slideshow Modifier
+type: module
+description: Provides a Modifier to set the slideshow background on an element.
+core: 8.x
+package: Modifiers
+dependencies:
+  - modifiers:modifiers
+  - paragraphs:paragraphs

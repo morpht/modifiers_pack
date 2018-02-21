@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow_bg_modifier.field_mod_bgs_delay
+    - field.field.paragraph.slideshow_bg_modifier.field_mod_bgs_images
+    - field.field.paragraph.slideshow_bg_modifier.field_mod_bgs_trans_duration
+    - field.field.paragraph.slideshow_bg_modifier.field_mod_bgs_trans_timing
+    - paragraphs.paragraphs_type.slideshow_bg_modifier
+id: paragraph.slideshow_bg_modifier.default
+targetEntityType: paragraph
+bundle: slideshow_bg_modifier
+mode: default
+content:
+  field_mod_bgs_delay:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_mod_bgs_images:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  field_mod_bgs_trans_duration:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_mod_bgs_trans_timing:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: slideshow_bg_modifier
+label: 'Slideshow Background Modifier'
+behavior_plugins: {  }

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_bgs_trans_timing
+    - paragraphs.paragraphs_type.slideshow_bg_modifier
+  module:
+    - options
+id: paragraph.slideshow_bg_modifier.field_mod_bgs_trans_timing
+field_name: field_mod_bgs_trans_timing
+entity_type: paragraph
+bundle: slideshow_bg_modifier
+label: 'Transition timing'
+description: 'The transition timing specifies the speed curve of the transition effect. Default: "ease-in".'
+required: true
+translatable: false
+default_value:
+  -
+    value: ease-in
+default_value_callback: ''
+settings: {  }
+field_type: list_string
