@@ -14,9 +14,6 @@
     "drupal/media_entity_image": "~1.0",
     "drupal/modifiers": "~1.0",
     "drupal/paragraphs": "~1.0",
-    "drupal/video_embed_field": "~1.0",
-    "matthojo/videojs-background": "~1.0",
-    "pixelcog/parallax-js": "~1.4",
-    "videojs/videojs-youtube": "~2.3"
+    "drupal/video_embed_field": "~1.0"
   }
 }
