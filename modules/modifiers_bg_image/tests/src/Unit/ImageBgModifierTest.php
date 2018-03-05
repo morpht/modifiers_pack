@@ -60,6 +60,30 @@ class ImageBgModifierTest extends UnitTestCase {
     $this->assertEmpty($actual_2->getSettings());
     $this->assertEquals($expected_attributes_2, $actual_2->getAttributes());
     $this->assertEmpty($actual_2->getLinks());
+
+    // Image position is not empty.
+    $actual_3 = ImageBgModifier::modification('.selector', [
+      'image' => '/image-path',
+      'image_position' => 'left-bottom',
+    ]);
+    $expected_css_3 = [
+      'all' => [
+        '.selector' => [
+          'background-image:url("/image-path")',
+          'background-position:left bottom',
+        ],
+      ],
+    ];
+    $expected_attributes_3 = [
+      'class' => [
+        'modifiers-has-background',
+      ],
+    ];
+    $this->assertEquals($expected_css_3, $actual_3->getCss());
+    $this->assertEmpty($actual_3->getLibraries());
+    $this->assertEmpty($actual_3->getSettings());
+    $this->assertEquals($expected_attributes_3, $actual_3->getAttributes());
+    $this->assertEmpty($actual_3->getLinks());
   }
 
 }

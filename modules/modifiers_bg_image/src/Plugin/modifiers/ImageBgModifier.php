@@ -45,7 +45,7 @@ class ImageBgModifier extends ModifierPluginBase {
       }
       if (!empty($config['image_position'])) {
         $position = str_replace('-', ' ', $config['image_position']);
-        $css['$media'][$selector][] = 'background-position:' . $position;
+        $css[$media][$selector][] = 'background-position:' . $position;
       }
 
       return new Modification($css, [], [], $attributes);
