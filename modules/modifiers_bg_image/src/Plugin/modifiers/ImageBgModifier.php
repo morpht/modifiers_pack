@@ -27,10 +27,6 @@ class ImageBgModifier extends ModifierPluginBase {
       $css[$media][$selector][] = 'background-image:url("' . $config['image'] . '")';
       $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
-      if (!empty($config['bgi_color_val'])) {
-        $css['all'][$selector][] = 'background-color:' . $config['bgi_color_val'];
-      }
-
       if (!empty($config['image_style'])) {
 
         switch ($config['image_style']) {
@@ -46,6 +42,9 @@ class ImageBgModifier extends ModifierPluginBase {
             $css[$media][$selector][] = 'background-repeat:' . $config['image_style'];
             break;
         }
+      }
+      if (!empty($config['bgi_color_val'])) {
+        $css['all'][$selector][] = 'background-color:' . $config['bgi_color_val'];
       }
 
       return new Modification($css, [], [], $attributes);
