@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image_bg_modifier.field_mod_image
+    - field.field.paragraph.image_bg_modifier.field_mod_image_position
     - field.field.paragraph.image_bg_modifier.field_mod_image_style
     - field.field.paragraph.image_bg_modifier.field_mod_media_query
     - image.style.thumbnail
@@ -23,6 +24,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: media_thumbnail
+    region: content
+  field_mod_image_position:
+    weight: 3
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_mod_image_style:
     weight: 2

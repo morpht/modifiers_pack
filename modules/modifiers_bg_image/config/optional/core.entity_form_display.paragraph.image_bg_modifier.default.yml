@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image_bg_modifier.field_mod_image
+    - field.field.paragraph.image_bg_modifier.field_mod_image_position
     - field.field.paragraph.image_bg_modifier.field_mod_image_style
     - field.field.paragraph.image_bg_modifier.field_mod_media_query
     - paragraphs.paragraphs_type.image_bg_modifier
@@ -20,6 +21,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_mod_image_position:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_mod_image_style:
     type: options_select
     weight: 1
