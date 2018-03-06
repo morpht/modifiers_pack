@@ -21,13 +21,12 @@ class VideoBgModifier extends ModifierPluginBase {
    */
   public static function modification($selector, array $config) {
 
-    if (!empty($config['bgv_color_val'])) {
-      $css['all'][$selector][] = 'background-color:' . $config['bgv_color_val'];
-    }
     if (!empty($config['video'])) {
       list($provider, $input) = explode(':', $config['video'], 2);
     }
     if (!empty($provider) && !empty($input)) {
+      $media = parent::getMediaQuery($config);
+
       switch ($provider) {
 
         case 'youtube':
@@ -43,8 +42,9 @@ class VideoBgModifier extends ModifierPluginBase {
           break;
       }
       if (!empty($args)) {
-        $media = parent::getMediaQuery($config);
-
+        if (!empty($config['bgv_color_val'])) {
+          $css['all'][$selector][] = 'background-color:' . $config['bgv_color_val'];
+        }
         if (!empty($config['bgv_image'])) {
           $args['image'] = $config['bgv_image'];
         }

@@ -16,7 +16,7 @@
 
     // iOS devices do not display the video. We will serve an image to them.
     var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    if (iOS !== false && config.image !== 'undefined') {
+    if (iOS !== false && typeof config.image !== 'undefined') {
       var image = 'url("' + config.image + '")';
       element.style.backgroundSize = 'cover';
 
