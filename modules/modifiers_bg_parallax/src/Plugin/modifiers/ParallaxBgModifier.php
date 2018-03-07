@@ -42,7 +42,7 @@ class ParallaxBgModifier extends ModifierPluginBase {
         $settings['args']['speed'] = floatval($config['parallax_speed']);
       }
       if (!empty($config['bgp_color_val'])) {
-        $css['all'][$selector][] = 'background-color:' . $config['bgp_color_val'];
+        $css[$media][$selector][] = 'background-color:' . $config['bgp_color_val'];
       }
       $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 

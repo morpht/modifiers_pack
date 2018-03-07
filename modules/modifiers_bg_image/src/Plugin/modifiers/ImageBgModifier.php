@@ -43,8 +43,12 @@ class ImageBgModifier extends ModifierPluginBase {
             break;
         }
       }
+      if (!empty($config['image_position'])) {
+        $position = str_replace('-', ' ', $config['image_position']);
+        $css[$media][$selector][] = 'background-position:' . $position;
+      }
       if (!empty($config['bgi_color_val'])) {
-        $css['all'][$selector][] = 'background-color:' . $config['bgi_color_val'];
+        $css[$media][$selector][] = 'background-color:' . $config['bgi_color_val'];
       }
 
       return new Modification($css, [], [], $attributes);

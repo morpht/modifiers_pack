@@ -21,7 +21,6 @@ class PaddingModifier extends ModifierPluginBase {
    */
   public static function modification($selector, array $config) {
 
-    $css = [];
     $media = parent::getMediaQuery($config);
 
     if (!empty($config['padding_t_size']) && !empty($config['padding_t_units'])) {

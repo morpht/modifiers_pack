@@ -55,7 +55,9 @@ class ShadowModifier extends ModifierPluginBase {
         . $shadow[1] . ' ' . $shadow[2] . ' ' . $shadow[3] . ' ' . $shadow[4];
       $css[$media][$selector . '::before'][] = 'opacity:1';
     }
+
     $shadow = [];
+
     if (isset($config['shadow_h_offset_x'])) {
       $shadow[] = $config['shadow_h_offset_x'] . 'px';
     }

@@ -43,7 +43,7 @@ class VideoBgModifier extends ModifierPluginBase {
       }
       if (!empty($args)) {
         if (!empty($config['bgv_color_val'])) {
-          $css['all'][$selector][] = 'background-color:' . $config['bgv_color_val'];
+          $css[$media][$selector][] = 'background-color:' . $config['bgv_color_val'];
         }
         if (!empty($config['bgv_image'])) {
           $args['image'] = $config['bgv_image'];
