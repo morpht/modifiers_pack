@@ -9,3 +9,4 @@ dependencies:
   - drupal:options
   - media_entity:media_entity
   - media_entity_image:media_entity_image
+  - color_field:color_field

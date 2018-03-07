@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.parallax_bg_modifier.field_mod_bgp_color_val
     - field.field.paragraph.parallax_bg_modifier.field_mod_media_query
     - field.field.paragraph.parallax_bg_modifier.field_mod_parallax
     - field.field.paragraph.parallax_bg_modifier.field_mod_parallax_speed
@@ -14,8 +15,17 @@ targetEntityType: paragraph
 bundle: parallax_bg_modifier
 mode: default
 content:
+  field_mod_bgp_color_val:
+    weight: 3
+    label: inline
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_mod_media_query:
-    weight: 2
+    weight: 4
     label: inline
     settings:
       link_to_entity: false
@@ -23,7 +33,7 @@ content:
     type: string
     region: content
   field_mod_parallax:
-    weight: 0
+    weight: 1
     label: inline
     settings:
       image_style: thumbnail
@@ -32,7 +42,7 @@ content:
     type: media_thumbnail
     region: content
   field_mod_parallax_speed:
-    weight: 1
+    weight: 2
     label: inline
     settings:
       thousand_separator: ''

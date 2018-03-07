@@ -25,6 +25,8 @@ class VideoBgModifier extends ModifierPluginBase {
       list($provider, $input) = explode(':', $config['video'], 2);
     }
     if (!empty($provider) && !empty($input)) {
+      $media = parent::getMediaQuery($config);
+
       switch ($provider) {
 
         case 'youtube':
@@ -40,8 +42,12 @@ class VideoBgModifier extends ModifierPluginBase {
           break;
       }
       if (!empty($args)) {
-        $media = parent::getMediaQuery($config);
-
+        if (!empty($config['bgv_color_val'])) {
+          $css[$media][$selector][] = 'background-color:' . $config['bgv_color_val'];
+        }
+        if (!empty($config['bgv_image'])) {
+          $args['image'] = $config['bgv_image'];
+        }
         $css[$media][$selector][] = 'position:relative';
         $css[$media][$selector . ' .videojs-background-wrap'][] = 'position:absolute;'
           . 'overflow:hidden;width:100%;height:100%;top:0;left:0;z-index:-998';

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_bgv_color_val
+    - paragraphs.paragraphs_type.video_bg_modifier
+  module:
+    - color_field
+id: paragraph.video_bg_modifier.field_mod_bgv_color_val
+field_name: field_mod_bgv_color_val
+entity_type: paragraph
+bundle: video_bg_modifier
+label: 'Background Color'
+description: 'Video background fallback color.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type
