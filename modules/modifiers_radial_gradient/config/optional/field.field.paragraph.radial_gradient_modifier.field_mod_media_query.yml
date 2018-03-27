@@ -1,12 +1,9 @@
-uuid: cce3ee76-20d6-4918-b20b-518fd93bd7e3
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_mod_media_query
     - paragraphs.paragraphs_type.radial_gradient_modifier
-_core:
-  default_config_hash: gN0W9QH3nQ08AWeK207EEhWblDuHTnuxx7sr7EMQ2QU
 id: paragraph.radial_gradient_modifier.field_mod_media_query
 field_name: field_mod_media_query
 entity_type: paragraph

@@ -1,4 +1,3 @@
-uuid: c4c50e83-dfe5-4f86-bd02-8656ccc46e65
 langcode: en
 status: true
 dependencies:
@@ -6,8 +5,6 @@ dependencies:
     - field.storage.paragraph.field_mod_r_gradient_colors
     - paragraphs.paragraphs_type.radial_gradient_modifier
     - taxonomy.vocabulary.modifiers_color
-_core:
-  default_config_hash: m0kdhAxiF_UFdfWF_XIQN5DEv5TCybIRawirMXIi0OU
 id: paragraph.radial_gradient_modifier.field_mod_r_gradient_colors
 field_name: field_mod_r_gradient_colors
 entity_type: paragraph

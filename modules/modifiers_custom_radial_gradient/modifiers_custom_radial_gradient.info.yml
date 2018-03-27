@@ -6,4 +6,5 @@ package: Modifiers
 dependencies:
   - modifiers:modifiers (>=8.x-1.0-alpha2)
   - paragraphs:paragraphs
+  - drupal:options
   - color_field:color_field

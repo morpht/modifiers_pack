@@ -1,4 +1,3 @@
-uuid: d7d590ef-181e-4dab-8496-0f9e942bf886
 langcode: en
 status: true
 dependencies:
@@ -11,8 +10,6 @@ dependencies:
     - paragraphs.paragraphs_type.radial_gradient_modifier
   module:
     - options
-_core:
-  default_config_hash: vlrVnQ_z21aUAg4vMTLnxLs8lUCuTU5yx2waK50f_L0
 id: paragraph.radial_gradient_modifier.default
 targetEntityType: paragraph
 bundle: radial_gradient_modifier

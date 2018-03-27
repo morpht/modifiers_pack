@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.custom_radial_gradient_modifier.field_mod_media_query
     - field.field.paragraph.custom_radial_gradient_modifier.field_mod_cr_gradient_colors
     - field.field.paragraph.custom_radial_gradient_modifier.field_mod_cr_gradient_position
     - field.field.paragraph.custom_radial_gradient_modifier.field_mod_cr_gradient_shape
     - field.field.paragraph.custom_radial_gradient_modifier.field_mod_cr_gradient_size
+    - field.field.paragraph.custom_radial_gradient_modifier.field_mod_media_query
     - paragraphs.paragraphs_type.custom_radial_gradient_modifier
   module:
     - options
@@ -15,14 +15,6 @@ targetEntityType: paragraph
 bundle: custom_radial_gradient_modifier
 mode: default
 content:
-  field_mod_media_query:
-    weight: 2
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_mod_cr_gradient_colors:
     weight: 0
     label: inline
@@ -55,5 +47,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
+  field_mod_media_query:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden: {  }

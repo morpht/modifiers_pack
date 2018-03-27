@@ -1,4 +1,3 @@
-uuid: 6708a52b-e7e2-4dad-9d0d-d5cf19dd2e71
 langcode: en
 status: true
 dependencies:
@@ -9,10 +8,6 @@ dependencies:
     - field.field.paragraph.radial_gradient_modifier.field_mod_r_gradient_shape
     - field.field.paragraph.radial_gradient_modifier.field_mod_r_gradient_size
     - paragraphs.paragraphs_type.radial_gradient_modifier
-  module:
-    - workbench_moderation
-_core:
-  default_config_hash: 8LbvP11q2nMzRQQk-BGkTmWe3hAfPxwyavXR4U0TcRU
 id: paragraph.radial_gradient_modifier.default
 targetEntityType: paragraph
 bundle: radial_gradient_modifier
