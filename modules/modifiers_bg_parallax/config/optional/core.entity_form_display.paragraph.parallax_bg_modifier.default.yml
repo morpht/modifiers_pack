@@ -7,6 +7,8 @@ dependencies:
     - field.field.paragraph.parallax_bg_modifier.field_mod_parallax
     - field.field.paragraph.parallax_bg_modifier.field_mod_parallax_speed
     - paragraphs.paragraphs_type.parallax_bg_modifier
+  module:
+    - color_field
 id: paragraph.parallax_bg_modifier.default
 targetEntityType: paragraph
 bundle: parallax_bg_modifier
@@ -29,14 +31,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_mod_parallax:
-    type: entity_reference_autocomplete
     weight: 0
-    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_mod_parallax_speed:
     type: number
     weight: 1

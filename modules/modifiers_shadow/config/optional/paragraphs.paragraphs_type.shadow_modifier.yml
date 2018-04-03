@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: shadow_modifier
 label: 'Shadow Modifier'
+icon_uuid: null
+description: null
 behavior_plugins: {  }

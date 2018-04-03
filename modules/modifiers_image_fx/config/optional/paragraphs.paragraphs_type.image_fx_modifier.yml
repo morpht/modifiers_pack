@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: image_fx_modifier
 label: 'Image FX Modifier'
+icon_uuid: null
+description: null
 behavior_plugins: {  }

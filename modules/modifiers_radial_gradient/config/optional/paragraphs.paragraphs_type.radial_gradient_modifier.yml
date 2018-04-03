@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: radial_gradient_modifier
 label: 'Radial Gradient Modifier'
+icon_uuid: null
+description: null
 behavior_plugins: {  }

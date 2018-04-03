@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_mod_bgv_image
-    - media_entity.bundle.image
+    - media.type.image
     - paragraphs.paragraphs_type.video_bg_modifier
 id: paragraph.video_bg_modifier.field_mod_bgv_image
 field_name: field_mod_bgv_image

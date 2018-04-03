@@ -7,13 +7,15 @@ dependencies:
     - field.field.paragraph.video_bg_modifier.field_mod_media_query
     - field.field.paragraph.video_bg_modifier.field_mod_video
     - paragraphs.paragraphs_type.video_bg_modifier
+  module:
+    - color_field
 id: paragraph.video_bg_modifier.default
 targetEntityType: paragraph
 bundle: video_bg_modifier
 mode: default
 content:
   field_mod_bgv_color_val:
-    weight: 3
+    weight: 2
     label: inline
     settings:
       format: hex
@@ -22,15 +24,15 @@ content:
     type: color_field_formatter_text
     region: content
   field_mod_bgv_image:
-    weight: 2
+    type: entity_reference_label
+    weight: 1
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_mod_media_query:
-    weight: 4
+    weight: 3
     label: inline
     settings:
       link_to_entity: false
@@ -38,12 +40,12 @@ content:
     type: string
     region: content
   field_mod_video:
-    weight: 1
+    type: entity_reference_label
+    weight: 0
     label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
     region: content
 hidden:
   created: true

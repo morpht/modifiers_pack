@@ -4,6 +4,6 @@ description: Provides a Modifier to set the absolute height on an element.
 core: 8.x
 package: Modifiers
 dependencies:
-  - modifiers:modifiers (>=8.x-1.0-alpha2)
+  - modifiers:modifiers
   - paragraphs:paragraphs
   - drupal:options

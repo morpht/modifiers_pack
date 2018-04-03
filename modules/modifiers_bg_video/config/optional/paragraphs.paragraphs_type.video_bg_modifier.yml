@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: video_bg_modifier
 label: 'Video Background Modifier'
+icon_uuid: null
+description: null
 behavior_plugins: {  }

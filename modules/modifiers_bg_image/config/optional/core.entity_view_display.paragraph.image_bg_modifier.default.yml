@@ -11,7 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.image_bg_modifier
   module:
     - color_field
-    - media_entity
+    - media
     - options
 id: paragraph.image_bg_modifier.default
 targetEntityType: paragraph
@@ -28,13 +28,13 @@ content:
     type: color_field_formatter_text
     region: content
   field_mod_image:
+    type: media_thumbnail
     weight: 0
     label: inline
     settings:
       image_style: thumbnail
       image_link: ''
     third_party_settings: {  }
-    type: media_thumbnail
     region: content
   field_mod_image_position:
     weight: 3

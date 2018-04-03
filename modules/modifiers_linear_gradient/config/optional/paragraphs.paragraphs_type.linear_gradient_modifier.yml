@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: linear_gradient_modifier
 label: 'Linear Gradient Modifier'
+icon_uuid: null
+description: null
 behavior_plugins: {  }

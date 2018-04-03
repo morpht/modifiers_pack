@@ -4,7 +4,7 @@ description: Provides a Modifier to set the radial gradient on an element using 
 core: 8.x
 package: Modifiers
 dependencies:
-  - modifiers:modifiers (>=8.x-1.0-alpha2)
+  - modifiers:modifiers
   - paragraphs:paragraphs
   - drupal:options
   - color_field:color_field

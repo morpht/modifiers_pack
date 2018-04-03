@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: fonts_modifier
 label: 'Fonts Modifier'
+icon_uuid: null
+description: null
 behavior_plugins: {  }

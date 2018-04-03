@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: colors_modifier
 label: 'Colors Modifier'
+icon_uuid: null
+description: null
 behavior_plugins: {  }
