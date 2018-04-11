@@ -6,7 +6,7 @@ parallax:
     url: https://github.com/pixelcog/parallax.js/blob/master/LICENSE
     gpl-compatible: true
   js:
-    /libraries/parallax-js/parallax.min.js: {}
+    /libraries/parallax.js/parallax.min.js: {}
   dependencies:
     - core/jquery
 

@@ -1,8 +1,8 @@
 # Parallax Background Modifier
 
 ## Overview
-This module implements a Modifier which allows you to set background image with 
-configurable Parallax speed. 
+This module implements a Modifier which allows you to set background image with
+configurable Parallax speed.
 
 Optionally you can set media queries.
 
@@ -10,10 +10,9 @@ Optionally you can set media queries.
 1. The module can be installed via the
 [standard Drupal installation process](http://drupal.org/node/1897420).
 2. It will create a new Paragraph bundle.
-3. It will create a new media bundle of type Image (if it doesn't exist yet).
-4. Add this Paragraph bundle to a field_modifiers field on an entity (Block or
+3. Add this Paragraph bundle to a field_modifiers field on an entity (Block or
 Paragraph) or onto a field on a Look.
-5. Install required library by one of these 2 options:
+4. Install required library by one of these 2 options:
 
 ### A. Library installation (manual)
 1. Download [Parallax.js](https://github.com/pixelcog/parallax.js) library
@@ -27,7 +26,7 @@ Paragraph) or onto a field on a Look.
       {
         "type": "package",
         "package": {
-          "name": "pixelcog/parallax-js",
+          "name": "pixelcog/parallax.js",
           "version": "1.4.2",
           "dist": {
             "type": "zip",
@@ -51,7 +50,7 @@ Paragraph) or onto a field on a Look.
     ```
 3. Run following command to download required libraries.
     ```
-    composer require pixelcog/parallax-js
+    composer require pixelcog/parallax.js
     ```
 
 ### Optional steps for better user experience

@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_mod_video
-    - media_entity.bundle.video
+    - media.type.video_embed
     - paragraphs.paragraphs_type.video_bg_modifier
 id: paragraph.video_bg_modifier.field_mod_video
 field_name: field_mod_video
@@ -19,7 +19,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      video: video
+      video_embed: video_embed
     sort:
       field: _none
     auto_create: false

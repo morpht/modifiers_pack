@@ -1,7 +1,7 @@
-# Image FX modifier
+# Image FX Modifier
 
 ## Overview
-This module implements a Modifier which allows you to set CSS effects for 
+This module implements a Modifier which allows you to set CSS effects for
 images with the :hover variant with transition duration.
 
 Optionally you can set media queries.

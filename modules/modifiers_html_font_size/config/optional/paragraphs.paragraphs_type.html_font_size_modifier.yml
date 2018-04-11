@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: html_font_size_modifier
 label: 'HTML Font Size Modifier'
+icon_uuid: null
+description: null
 behavior_plugins: {  }

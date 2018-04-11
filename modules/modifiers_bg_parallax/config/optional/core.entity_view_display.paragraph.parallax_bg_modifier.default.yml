@@ -2,37 +2,50 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.parallax_bg_modifier.field_mod_bgp_color_val
     - field.field.paragraph.parallax_bg_modifier.field_mod_media_query
     - field.field.paragraph.parallax_bg_modifier.field_mod_parallax
     - field.field.paragraph.parallax_bg_modifier.field_mod_parallax_speed
     - image.style.thumbnail
     - paragraphs.paragraphs_type.parallax_bg_modifier
   module:
-    - media_entity
+    - color_field
+    - media
 id: paragraph.parallax_bg_modifier.default
 targetEntityType: paragraph
 bundle: parallax_bg_modifier
 mode: default
 content:
-  field_mod_media_query:
+  field_mod_bgp_color_val:
+    type: color_field_formatter_text
     weight: 2
+    region: content
+    label: inline
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+  field_mod_media_query:
+    type: string
+    weight: 3
+    region: content
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
   field_mod_parallax:
+    type: media_thumbnail
     weight: 0
     label: inline
     settings:
       image_style: thumbnail
       image_link: ''
     third_party_settings: {  }
-    type: media_thumbnail
     region: content
   field_mod_parallax_speed:
+    type: number_decimal
     weight: 1
+    region: content
     label: inline
     settings:
       thousand_separator: ''
@@ -40,8 +53,6 @@ content:
       scale: 2
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_decimal
-    region: content
 hidden:
   created: true
   uid: true

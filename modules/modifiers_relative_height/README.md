@@ -1,10 +1,10 @@
-# Relative height modifier
+# Relative Height Modifier
 
 ## Overview
-This module implements a Modifier which allows you to choose relative height 
-for an entity/element. Multiple ratios are provided via select box. 
+This module implements a Modifier which allows you to choose relative height
+for an entity/element. Multiple ratios are provided via select box.
 
-Optionally you can set media queries and make the content to be aligned 
+Optionally you can set media queries and make the content to be aligned
 vertically.
 
 ## Installation

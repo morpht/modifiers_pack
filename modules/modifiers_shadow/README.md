@@ -1,11 +1,11 @@
-# Shadow modifier
+# Shadow Modifier
 
 ## Overview
-This module implements a Modifier which allows you to set a shadow. The result 
-is CSS box-shadow shorthand property and all values are needed. Supports 
-optional hover variant with transition duration. 
+This module implements a Modifier which allows you to set a shadow. The result
+is CSS box-shadow shorthand property and all values are needed. Supports
+optional hover variant with transition duration.
 
-Optionally you can set media queries and make the content to be aligned 
+Optionally you can set media queries and make the content to be aligned
 vertically.
 
 ## Installation

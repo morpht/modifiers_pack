@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: parallax_bg_modifier
 label: 'Parallax Background Modifier'
+icon_uuid: null
+description: null
 behavior_plugins: {  }

@@ -1,7 +1,7 @@
-# Hide modifier
+# Hide Modifier
 
 ## Overview
-This module implements a Modifier which allows you to hide elements on the page. 
+This module implements a Modifier which allows you to hide elements on the page.
 
 Optionally you can set media queries.
 

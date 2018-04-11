@@ -55,7 +55,9 @@ class ShadowModifier extends ModifierPluginBase {
         . $shadow[1] . ' ' . $shadow[2] . ' ' . $shadow[3] . ' ' . $shadow[4];
       $css[$media][$selector . '::before'][] = 'opacity:1';
     }
+
     $shadow = [];
+
     if (isset($config['shadow_h_offset_x'])) {
       $shadow[] = $config['shadow_h_offset_x'] . 'px';
     }
@@ -95,7 +97,7 @@ class ShadowModifier extends ModifierPluginBase {
     }
 
     if (!empty($css)) {
-      $attributes['class'][] = 'modifiers-has-background';
+      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
       return new Modification($css, [], [], $attributes);
     }

@@ -21,7 +21,6 @@ class CornersModifier extends ModifierPluginBase {
    */
   public static function modification($selector, array $config) {
 
-    $css = [];
     $media = parent::getMediaQuery($config);
 
     if (!empty($config['corners_tl_size']) && !empty($config['corners_tl_units'])) {

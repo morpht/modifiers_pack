@@ -6,6 +6,6 @@ package: Modifiers
 dependencies:
   - modifiers:modifiers
   - paragraphs:paragraphs
+  - drupal:media
   - drupal:options
-  - media_entity:media_entity
-  - media_entity_image:media_entity_image
+  - color_field:color_field

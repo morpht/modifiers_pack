@@ -22,6 +22,7 @@ class ParallaxBgModifier extends ModifierPluginBase {
   public static function modification($selector, array $config) {
 
     if (!empty($config['parallax'])) {
+      $css = [];
       $media = parent::getMediaQuery($config);
 
       $libraries = [
@@ -38,11 +39,14 @@ class ParallaxBgModifier extends ModifierPluginBase {
         ],
       ];
       if (!empty($config['parallax_speed'])) {
-        $settings['args']['speed'] = $config['parallax_speed'];
+        $settings['args']['speed'] = floatval($config['parallax_speed']);
       }
-      $attributes['class'][] = 'modifiers-has-background';
+      if (!empty($config['bgp_color_val'])) {
+        $css[$media][$selector][] = 'background-color:' . $config['bgp_color_val'];
+      }
+      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
-      return new Modification([], $libraries, $settings, $attributes);
+      return new Modification($css, $libraries, $settings, $attributes);
     }
     return NULL;
   }

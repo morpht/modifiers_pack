@@ -15,6 +15,34 @@ class LinearGradientModifierTest extends UnitTestCase {
    * @covers ::modification
    */
   public function testModification() {
+    // Gradient has only one color.
+    $actual_0 = LinearGradientModifier::modification('.selector', [
+      'l_gradient_colors' => [
+        'rgba(219,112,147,0.1)',
+      ],
+    ]);
+    $expected_css_0 = [
+      'all' => [
+        '.selector' => [
+          'background:rgba(219,112,147,0.1)',
+        ],
+      ],
+    ];
+    $expected_attributes_0 = [
+      'all' => [
+        '.selector' => [
+          'class' => [
+            'modifiers-has-background',
+          ],
+        ],
+      ],
+    ];
+    $this->assertEquals($expected_css_0, $actual_0->getCss());
+    $this->assertEmpty($actual_0->getLibraries());
+    $this->assertEmpty($actual_0->getSettings());
+    $this->assertEquals($expected_attributes_0, $actual_0->getAttributes());
+    $this->assertEmpty($actual_0->getLinks());
+
     // Gradient direction is empty.
     $actual_1 = LinearGradientModifier::modification('.selector', [
       'l_gradient_colors' => [
@@ -30,8 +58,12 @@ class LinearGradientModifierTest extends UnitTestCase {
       ],
     ];
     $expected_attributes_1 = [
-      'class' => [
-        'modifiers-has-background',
+      'all' => [
+        '.selector' => [
+          'class' => [
+            'modifiers-has-background',
+          ],
+        ],
       ],
     ];
     $this->assertEquals($expected_css_1, $actual_1->getCss());
@@ -56,8 +88,12 @@ class LinearGradientModifierTest extends UnitTestCase {
       ],
     ];
     $expected_attributes_2 = [
-      'class' => [
-        'modifiers-has-background',
+      'all' => [
+        '.selector' => [
+          'class' => [
+            'modifiers-has-background',
+          ],
+        ],
       ],
     ];
     $this->assertEquals($expected_css_2, $actual_2->getCss());

@@ -77,8 +77,12 @@ class ColorsModifierTest extends UnitTestCase {
       ],
     ];
     $expected_attributes_2 = [
-      'class' => [
-        'modifiers-has-background',
+      'all' => [
+        '.selector' => [
+          'class' => [
+            'modifiers-has-background',
+          ],
+        ],
       ],
     ];
     $this->assertEquals($expected_css_2, $actual_2->getCss());

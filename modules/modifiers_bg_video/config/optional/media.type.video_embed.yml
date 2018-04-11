@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - video_embed_media
+id: video_embed
+label: 'Video Embed'
+description: 'A remotely hosted video file.'
+source: video_embed_field
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_video_embed_field
+field_map: {  }

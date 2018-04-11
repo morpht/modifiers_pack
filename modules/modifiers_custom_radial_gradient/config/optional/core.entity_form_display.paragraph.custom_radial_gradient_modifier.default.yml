@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.custom_radial_gradient_modifier.field_mod_cr_gradient_colors
+    - field.field.paragraph.custom_radial_gradient_modifier.field_mod_cr_gradient_position
+    - field.field.paragraph.custom_radial_gradient_modifier.field_mod_cr_gradient_shape
+    - field.field.paragraph.custom_radial_gradient_modifier.field_mod_cr_gradient_size
+    - field.field.paragraph.custom_radial_gradient_modifier.field_mod_media_query
+    - paragraphs.paragraphs_type.custom_radial_gradient_modifier
+id: paragraph.custom_radial_gradient_modifier.default
+targetEntityType: paragraph
+bundle: custom_radial_gradient_modifier
+mode: default
+content:
+  field_mod_cr_gradient_colors:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mod_cr_gradient_position:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_mod_cr_gradient_shape:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mod_cr_gradient_size:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mod_media_query:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

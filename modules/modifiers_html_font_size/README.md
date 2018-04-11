@@ -1,7 +1,7 @@
-# HTML font size modifier
+# HTML Font Size Modifier
 
 ## Overview
-This module implements a Modifier which allows you to set base font size for 
+This module implements a Modifier which allows you to set base font size for
 the HTML tag.
 
 Optionally you can set media queries.
