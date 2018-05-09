@@ -43,6 +43,8 @@ class ShadowModifier extends ModifierPluginBase {
       $shadow[] = $config['shadow_color_val'];
     }
     if (count($shadow) === 5) {
+      $css[$media][$selector][] = 'position:relative';
+      $css[$media][$selector][] = 'z-index:0';
       $css[$media][$selector . '::before'][] = 'content:""';
       $css[$media][$selector . '::before'][] = 'display:block';
       $css[$media][$selector . '::before'][] = 'position:absolute';
