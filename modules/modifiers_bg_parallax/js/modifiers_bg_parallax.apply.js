@@ -14,10 +14,27 @@
       return;
     }
 
-    jarallax(document.querySelectorAll(selector), {
+    var pluginConfig = {
       speed: (typeof config.speed !== 'undefined' ? config.speed : 0.5)
+    };
+
+    toggle(element, media, pluginConfig);
+
+    window.addEventListener('resize', function () {
+      toggle(element, media, pluginConfig);
     });
 
   };
+
+  function toggle(element, media, pluginConfig) {
+
+    if (window.matchMedia(media).matches) {
+      jarallax(element, pluginConfig);
+    }
+    else {
+      jarallax(element, 'destroy');
+    }
+
+  }
 
 })(window.ParallaxBgModifier = window.ParallaxBgModifier || {});

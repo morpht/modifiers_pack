@@ -1,6 +1,6 @@
 parallax:
   remote: https://github.com/nk-o/jarallax
-  version: v1.10.3
+  version: 1.10.3
   license:
     name: MIT
     url: https://github.com/nk-o/jarallax/blob/master/LICENSE
