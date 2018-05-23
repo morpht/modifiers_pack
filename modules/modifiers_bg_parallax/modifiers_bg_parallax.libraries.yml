@@ -1,14 +1,12 @@
 parallax:
-  remote: https://github.com/pixelcog/parallax.js
-  version: 1.4.2
+  remote: https://github.com/nk-o/jarallax
+  version: 1.10.3
   license:
     name: MIT
-    url: https://github.com/pixelcog/parallax.js/blob/master/LICENSE
+    url: https://github.com/nk-o/jarallax/blob/master/LICENSE
     gpl-compatible: true
   js:
-    /libraries/parallax.js/parallax.min.js: {}
-  dependencies:
-    - core/jquery
+    /libraries/jarallax/dist/jarallax.min.js: {}
 
 apply:
   js:

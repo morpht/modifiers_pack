@@ -9,7 +9,7 @@ field_name: field_mod_parallax_speed
 entity_type: paragraph
 bundle: parallax_bg_modifier
 label: 'Parallax Speed'
-description: 'Select the scroll speed.'
+description: 'Select the scroll speed: -1.0 to 2.0.'
 required: false
 translatable: false
 default_value: {  }
