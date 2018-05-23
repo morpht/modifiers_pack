@@ -35,6 +35,7 @@ class ParallaxBgModifierTest extends UnitTestCase {
       'callback' => 'apply',
       'selector' => '.selector',
       'media' => 'all',
+      'args' => [],
     ];
     $expected_attributes_1 = [
       'all' => [

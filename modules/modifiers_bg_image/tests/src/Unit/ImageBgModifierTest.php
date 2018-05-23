@@ -83,8 +83,12 @@ class ImageBgModifierTest extends UnitTestCase {
       ],
     ];
     $expected_attributes_3 = [
-      'class' => [
-        'modifiers-has-background',
+      'all' => [
+        '.selector' => [
+          'class' => [
+            'modifiers-has-background',
+          ],
+        ],
       ],
     ];
     $this->assertEquals($expected_css_3, $actual_3->getCss());
