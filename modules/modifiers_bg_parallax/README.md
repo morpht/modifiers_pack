@@ -15,8 +15,8 @@ Paragraph) or onto a field on a Look.
 4. Install required library by one of these 2 options:
 
 ### A. Library installation (manual)
-1. Download [Parallax.js](https://github.com/pixelcog/parallax.js) library
-(version 1.4.2 is recommended).
+1. Download [Jarallax](https://github.com/nk-o/jarallax) library
+(version 1.10.3 is recommended).
 2. Place unpacked library in your libraries folder.
 
 ### B. Library installation (composer)
@@ -26,11 +26,11 @@ Paragraph) or onto a field on a Look.
       {
         "type": "package",
         "package": {
-          "name": "pixelcog/parallax.js",
-          "version": "1.4.2",
+          "name": "nk-o/jarallax",
+          "version": "1.10.3",
           "dist": {
             "type": "zip",
-            "url": "https://github.com/pixelcog/parallax.js/archive/v1.4.2.zip"
+            "url": "https://github.com/nk-o/jarallax/archive/v1.10.3.zip"
           },
           "require": {
             "composer/installers": "~1.0"
@@ -50,7 +50,7 @@ Paragraph) or onto a field on a Look.
     ```
 3. Run following command to download required libraries.
     ```
-    composer require pixelcog/parallax.js
+    composer require nk-o/jarallax
     ```
 
 ### Optional steps for better user experience

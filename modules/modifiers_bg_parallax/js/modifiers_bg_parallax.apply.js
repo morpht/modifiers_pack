@@ -3,7 +3,7 @@
  * Initializes modification based on provided configuration.
  */
 
-(function (ParallaxBgModifier, $) {
+(function (ParallaxBgModifier) {
 
   'use strict';
 
@@ -15,59 +15,26 @@
     }
 
     var pluginConfig = {
-      imageSrc: (typeof config.parallax !== 'undefined' ? config.parallax : false),
-      speed: (typeof config.speed !== 'undefined' ? config.speed : 0.2),
-      zIndex: 100
+      speed: (typeof config.speed !== 'undefined' ? config.speed : 0.5)
     };
 
-    $(selector).parallax(pluginConfig);
+    toggle(element, media, pluginConfig);
 
-    var slider = '.parallax-slider[src="' + pluginConfig.imageSrc + '"]';
-    slider = document.querySelector(slider);
-    if (slider) {
-
-      toggleDesktop(slider, media);
-
-      window.addEventListener('resize', function () {
-        toggleDesktop(slider, media);
-      });
-    }
-    else {
-
-      var image = element.style.backgroundImage;
-      if (!image) {
-        return;
-      }
-
-      toggleMobile(element, media, image);
-
-      window.addEventListener('resize', function () {
-        toggleMobile(element, media, image);
-      });
-    }
+    window.addEventListener('resize', function () {
+      toggle(element, media, pluginConfig);
+    });
 
   };
 
-  function toggleDesktop(element, media) {
+  function toggle(element, media, pluginConfig) {
 
     if (window.matchMedia(media).matches) {
-      element.style.display = '';
+      jarallax(element, pluginConfig);
     }
     else {
-      element.style.display = 'none';
+      jarallax(element, 'destroy');
     }
 
   }
 
-  function toggleMobile(element, media, image) {
-
-    if (window.matchMedia(media).matches) {
-      element.style.backgroundImage = image;
-    }
-    else {
-      element.style.backgroundImage = '';
-    }
-
-  }
-
-})(window.ParallaxBgModifier = window.ParallaxBgModifier || {}, jQuery);
+})(window.ParallaxBgModifier = window.ParallaxBgModifier || {});

@@ -22,8 +22,9 @@ class ParallaxBgModifier extends ModifierPluginBase {
   public static function modification($selector, array $config) {
 
     if (!empty($config['parallax'])) {
-      $css = [];
       $media = parent::getMediaQuery($config);
+
+      $css[$media][$selector][] = 'background-image:url("' . $config['parallax'] . '")';
 
       $libraries = [
         'modifiers_bg_parallax/parallax',
@@ -34,9 +35,7 @@ class ParallaxBgModifier extends ModifierPluginBase {
         'callback' => 'apply',
         'selector' => $selector,
         'media' => $media,
-        'args' => [
-          'parallax' => $config['parallax'],
-        ],
+        'args' => [],
       ];
       if (!empty($config['parallax_speed'])) {
         $settings['args']['speed'] = floatval($config['parallax_speed']);

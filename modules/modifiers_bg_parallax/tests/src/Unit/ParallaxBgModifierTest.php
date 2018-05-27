@@ -19,6 +19,13 @@ class ParallaxBgModifierTest extends UnitTestCase {
     $actual_1 = ParallaxBgModifier::modification('.selector', [
       'parallax' => '/image-path',
     ]);
+    $expected_css_1 = [
+      'all' => [
+        '.selector' => [
+          'background-image:url("/image-path")',
+        ],
+      ],
+    ];
     $expected_libraries_1 = [
       'modifiers_bg_parallax/parallax',
       'modifiers_bg_parallax/apply',
@@ -28,9 +35,7 @@ class ParallaxBgModifierTest extends UnitTestCase {
       'callback' => 'apply',
       'selector' => '.selector',
       'media' => 'all',
-      'args' => [
-        'parallax' => '/image-path',
-      ],
+      'args' => [],
     ];
     $expected_attributes_1 = [
       'all' => [
@@ -41,7 +46,7 @@ class ParallaxBgModifierTest extends UnitTestCase {
         ],
       ],
     ];
-    $this->assertEmpty($actual_1->getCss());
+    $this->assertEquals($expected_css_1, $actual_1->getCss());
     $this->assertEquals($expected_libraries_1, $actual_1->getLibraries());
     $this->assertEquals($expected_settings_1, $actual_1->getSettings());
     $this->assertEquals($expected_attributes_1, $actual_1->getAttributes());
@@ -52,6 +57,13 @@ class ParallaxBgModifierTest extends UnitTestCase {
       'parallax' => '/image-path',
       'parallax_speed' => '0.5',
     ]);
+    $expected_css_2 = [
+      'all' => [
+        '.selector' => [
+          'background-image:url("/image-path")',
+        ],
+      ],
+    ];
     $expected_libraries_2 = [
       'modifiers_bg_parallax/parallax',
       'modifiers_bg_parallax/apply',
@@ -62,7 +74,6 @@ class ParallaxBgModifierTest extends UnitTestCase {
       'selector' => '.selector',
       'media' => 'all',
       'args' => [
-        'parallax' => '/image-path',
         'speed' => '0.5',
       ],
     ];
@@ -75,7 +86,7 @@ class ParallaxBgModifierTest extends UnitTestCase {
         ],
       ],
     ];
-    $this->assertEmpty($actual_2->getCss());
+    $this->assertEquals($expected_css_2, $actual_2->getCss());
     $this->assertEquals($expected_libraries_2, $actual_2->getLibraries());
     $this->assertEquals($expected_settings_2, $actual_2->getSettings());
     $this->assertEquals($expected_attributes_2, $actual_2->getAttributes());
