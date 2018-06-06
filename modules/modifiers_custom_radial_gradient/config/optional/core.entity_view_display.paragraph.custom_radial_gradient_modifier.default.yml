@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.custom_radial_gradient_modifier.field_mod_media_query
     - paragraphs.paragraphs_type.custom_radial_gradient_modifier
   module:
+    - color_field
     - options
 id: paragraph.custom_radial_gradient_modifier.default
 targetEntityType: paragraph
@@ -17,11 +18,12 @@ mode: default
 content:
   field_mod_cr_gradient_colors:
     weight: 0
-    label: inline
+    label: above
     settings:
-      link: true
+      format: hex
+      opacity: '1'
     third_party_settings: {  }
-    type: entity_reference_label
+    type: color_field_formatter_text
     region: content
   field_mod_cr_gradient_position:
     weight: 5
