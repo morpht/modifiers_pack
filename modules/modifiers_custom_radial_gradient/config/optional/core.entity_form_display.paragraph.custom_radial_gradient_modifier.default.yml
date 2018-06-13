@@ -8,6 +8,8 @@ dependencies:
     - field.field.paragraph.custom_radial_gradient_modifier.field_mod_cr_gradient_size
     - field.field.paragraph.custom_radial_gradient_modifier.field_mod_media_query
     - paragraphs.paragraphs_type.custom_radial_gradient_modifier
+  module:
+    - color_field
 id: paragraph.custom_radial_gradient_modifier.default
 targetEntityType: paragraph
 bundle: custom_radial_gradient_modifier
@@ -15,9 +17,11 @@ mode: default
 content:
   field_mod_cr_gradient_colors:
     weight: 0
-    settings: {  }
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
     third_party_settings: {  }
-    type: options_select
+    type: color_field_widget_default
     region: content
   field_mod_cr_gradient_position:
     weight: 3
