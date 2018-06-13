@@ -18,7 +18,7 @@ mode: default
 content:
   field_mod_cr_gradient_colors:
     weight: 0
-    label: above
+    label: inline
     settings:
       format: hex
       opacity: '1'
