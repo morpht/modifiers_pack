@@ -1,6 +1,6 @@
 # Colors Modifier
 
-## Overview
+## INTRODUCTION
 This module implements a Modifier which allows you to use colors from a
 controlled vocabulary of Colors defined by you. It is possible to set
 background, text and link color accompanied by :hover variants.
@@ -10,7 +10,7 @@ Optionally you can set media queries and transition duration.
 If you need more freedom with color selection have a look at sibling module
 Custom Colors Modifier (modifiers_custom_colors).
 
-## Installation
+## INSTALLATION
 1. The module can be installed via the
 [standard Drupal installation process](http://drupal.org/node/1897420).
 2. It will create a new Paragraph bundle.
@@ -24,6 +24,6 @@ Paragraph) or onto a field on a Look.
 2. Download Spectrum library ([Spectrum](http://bgrins.github.io/spectrum)) to
 your libraries folder and change the widget for Color fields to "Spectrum".
 
-## Maintainers
+## MAINTAINERS
 This module is maintained by developers at Morpht. For more information on
 the company and our offerings, see [morpht.com](http://morpht.com).

@@ -1,6 +1,6 @@
 # Linear Gradient Modifier
 
-## Overview
+## INTRODUCTION
 This module implements a Modifier which allows you to use colors to set a
 linear gradient. You can set multiple colors, they will be evenly distributed
 along a customizable direction. If only one color is provided it will be set
@@ -11,7 +11,7 @@ Optionally you can set media queries and transition duration.
 If you need more freedom with color selection have a look at sibling module
 Custom Linear Gradient Modifier (modifiers_custom_linear_gradient).
 
-## Installation
+## INSTALLATION
 1. The module can be installed via the
 [standard Drupal installation process](http://drupal.org/node/1897420).
 2. It will create a new Paragraph bundle.
@@ -25,6 +25,6 @@ Paragraph) or onto a field on a Look.
 2. Download Spectrum library ([Spectrum](http://bgrins.github.io/spectrum)) to
 your libraries folder and change the widget for Color fields to "Spectrum".
 
-## Maintainers
+## MAINTAINERS
 This module is maintained by developers at Morpht. For more information on
 the company and our offerings, see [morpht.com](http://morpht.com).
