@@ -21,37 +21,37 @@ Paragraph) or onto a field on a Look.
 
 ### B. Library installation (composer)
 1. Copy the following into your project's composer.json file.
-    ```
-    "repositories": [
-      {
-        "type": "package",
-        "package": {
-          "name": "nk-o/jarallax",
-          "version": "1.10.3",
-          "dist": {
-            "type": "zip",
-            "url": "https://github.com/nk-o/jarallax/archive/v1.10.3.zip"
-          },
-          "require": {
-            "composer/installers": "~1.0"
-          },
-          "type": "drupal-library"
-        }
-      }
-    ]
-    ```
+```
+"repositories": [
+ {
+  "type": "package",
+  "package": {
+   "name": "nk-o/jarallax",
+   "version": "1.10.3",
+   "dist": {
+    "type": "zip",
+    "url": "https://github.com/nk-o/jarallax/archive/v1.10.3.zip"
+   },
+   "require": {
+    "composer/installers": "~1.0"
+   },
+   "type": "drupal-library"
+  }
+ }
+]
+```
 2. Ensure you have following mapping inside your composer.json.
-    ```
-    "extra": {
-      "installer-paths": {
-        "libraries/{$name}": ["type:drupal-library"]
-      }
-    }
-    ```
+```
+"extra": {
+ "installer-paths": {
+  "libraries/{$name}": ["type:drupal-library"]
+ }
+}
+```
 3. Run following command to download required libraries.
-    ```
-    composer require nk-o/jarallax
-    ```
+```
+composer require nk-o/jarallax
+```
 
 ### Optional steps for better user experience
 1. Use a paragraph Preview view mode on Form display.
