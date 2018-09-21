@@ -7,9 +7,9 @@
 
   'use strict';
 
-  VideoBgModifier.apply = function (selector, media, config) {
+  VideoBgModifier.apply = function (context, selector, media, config) {
 
-    var element = document.querySelector(selector);
+    var element = context.querySelector(selector);
     if (!element) {
       return;
     }
@@ -33,7 +33,7 @@
         element.setAttribute('id', id);
       }
 
-      var video = document.createElement('video');
+      var video = context.createElement('video');
       video.setAttribute('id', id + '-bg');
       video.setAttribute('class', 'video-js vjs-default-skin');
       video.setAttribute('autoplay', '');
