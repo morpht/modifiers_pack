@@ -18,6 +18,7 @@
     var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     if (iOS !== false && typeof config.image !== 'undefined') {
       var image = 'url("' + config.image + '")';
+      element.style.backgroundPosition = 'center';
       element.style.backgroundSize = 'cover';
 
       toggleMobile(element, media, image);
