@@ -11,10 +11,9 @@ Optionally you can set media queries.
 1. The module can be installed via the
 [standard Drupal installation process](http://drupal.org/node/1897420).
 2. It will create a new Paragraph bundle.
-3. It will create a new Video Embed media bundle (if it doesn't exist yet).
-4. Create a new field of Paragraph type on target entity, choose this one or
+3. Create a new field of Paragraph type on target entity, choose this one or
 more Modifiers to be included.
-5. Install required libraries by one of these 2 options:
+4. Install required libraries by one of these 2 options:
 
 ### A. Library installation (manual)
 1. Download [VideoJS Youtube](https://github.com/videojs/videojs-youtube)

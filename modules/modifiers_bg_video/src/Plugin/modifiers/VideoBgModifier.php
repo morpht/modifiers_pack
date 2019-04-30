@@ -22,25 +22,18 @@ class VideoBgModifier extends ModifierPluginBase {
   public static function modification($selector, array $config) {
 
     if (!empty($config['video'])) {
-      list($provider, $input) = explode(':', $config['video'], 2);
-    }
-    if (!empty($provider) && !empty($input)) {
       $media = parent::getMediaQuery($config);
 
-      switch ($provider) {
+      preg_match('/^https?:\/\/(www\.)?((?!.*list=)youtube\.com\/watch\?.*v=|youtu\.be\/)(?<id>[0-9A-Za-z_-]*)/', $config['video'], $matches);
 
-        case 'youtube':
-          preg_match('/^https?:\/\/(www\.)?((?!.*list=)youtube\.com\/watch\?.*v=|youtu\.be\/)(?<id>[0-9A-Za-z_-]*)/', $input, $matches);
-
-          if (!empty($matches['id'])) {
-            $args = [
-              'provider' => $provider,
-              'video' => $matches['id'],
-            ];
-            $provider_library = 'modifiers_bg_video/videojs_youtube';
-          }
-          break;
+      if (!empty($matches['id'])) {
+        $args = [
+          'provider' => 'youtube',
+          'video' => $matches['id'],
+        ];
+        $provider_library = 'modifiers_bg_video/videojs_youtube';
       }
+
       if (!empty($args)) {
         if (!empty($config['bgv_color_val'])) {
           $css[$media][$selector][] = 'background-color:' . $config['bgv_color_val'];

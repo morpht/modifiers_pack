@@ -17,7 +17,7 @@ class VideoBgModifierTest extends UnitTestCase {
   public function testModification() {
     // Well-formed video URL.
     $actual_1 = VideoBgModifier::modification('.selector', [
-      'video' => 'youtube:https://www.youtube.com/watch?v=video-code',
+      'video' => 'https://www.youtube.com/watch?v=video-code',
     ]);
     $expected_css_1 = [
       'all' => [
