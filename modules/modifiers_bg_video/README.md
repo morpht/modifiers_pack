@@ -18,7 +18,7 @@ more Modifiers to be included.
 
 ### A. Library installation (manual)
 1. Download [VideoJS Youtube](https://github.com/videojs/videojs-youtube)
-library (version 2.3.2 is recommended).
+library (version 2.6.0 is recommended).
 2. Download [VideoJS Background](https://github.com/matthojo/videojs-Background)
 library (version 1.0.7 is recommended).
 3. Place unpacked libraries in your libraries folder.
@@ -46,10 +46,10 @@ library (version 1.0.7 is recommended).
   "type": "package",
   "package": {
    "name": "videojs/videojs-youtube",
-   "version": "2.3.2",
+   "version": "2.6.0",
    "dist": {
     "type": "zip",
-    "url": "https://github.com/videojs/videojs-youtube/archive/v2.3.2.zip"
+    "url": "https://github.com/videojs/videojs-youtube/archive/v2.6.0.zip"
    },
    "require": {
     "composer/installers": "~1.0"
@@ -69,7 +69,7 @@ library (version 1.0.7 is recommended).
 ```
 3. Run following command to download required libraries.
 ```
-composer require matthojo/videojs-background videojs/videojs-youtube
+composer require matthojo/videojs-background:^1.0 videojs/videojs-youtube:^2.0
 ```
 
 ### Optional steps for better user experience
