@@ -43,6 +43,8 @@ class ColorsModifier extends ModifierPluginBase {
     }
     if (!empty($config['h_link_color'])) {
       $css[$media][$selector . ' a:hover'][] = 'color:' . $config['h_link_color'];
+      $css[$media][$selector . ' a:focus'][] = 'outline:3px solid ' . $config['h_link_color'];
+      $css[$media][$selector . ' a:focus'][] = 'outline-offset:2px';
     }
     if (!empty($config['h_text_color'])) {
       $css[$media][$selector . ':hover'][] = 'color:' . $config['h_text_color'];
