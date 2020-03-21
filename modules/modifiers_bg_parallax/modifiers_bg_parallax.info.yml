@@ -2,6 +2,7 @@ name: Parallax Background Modifier
 type: module
 description: Provides a Modifier to set the parallax background on an element.
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: Modifiers
 dependencies:
   - modifiers:modifiers (>=8.x-1.2)
