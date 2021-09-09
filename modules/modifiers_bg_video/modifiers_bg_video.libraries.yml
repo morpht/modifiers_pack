@@ -1,15 +1,15 @@
 videojs:
   remote: https://github.com/videojs/video.js
-  version: 5.18.4
+  version: 7.15.4
   license:
     name: Apache License, Version 2.0
-    url: https://github.com/videojs/video.js/blob/master/LICENSE
+    url: https://github.com/videojs/video.js/blob/main/LICENSE
     gpl-compatible: true
   css:
     theme:
-      //vjs.zencdn.net/5.18.4/video-js.min.css: {}
+      //vjs.zencdn.net/7.15.4/video-js.min.css: {}
   js:
-    //vjs.zencdn.net/5.18.4/video.min.js: { type: external, minified: true }
+    //vjs.zencdn.net/7.15.4/video.min.js: { type: external, minified: true }
 
 videojs_background:
   remote: https://github.com/matthojo/videojs-Background
@@ -19,11 +19,21 @@ videojs_background:
     url: https://github.com/matthojo/videojs-Background/blob/master/LICENSE-MIT
     gpl-compatible: true
   js:
-    /libraries/videojs-background/dist/videojs-background.min.js: {}
+    js/videojs-background.js: {}
+
+videojs_vimeo:
+  remote: https://github.com/mobiliza/videojs-vimeo
+  version: 0.6.0
+  license:
+    name: MIT
+    url: https://github.com/mobiliza/videojs-vimeo/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/videojs-vimeo/dist/videojs-vimeo.umd.js: {}
 
 videojs_youtube:
-  remote: https://github.com/videojs/videojs-youtube/
-  version: 2.6.0
+  remote: https://github.com/videojs/videojs-youtube
+  version: 2.6.1
   license:
     name: MIT
     url: https://github.com/videojs/videojs-youtube/blob/master/README.md#license

@@ -10,7 +10,7 @@ field_name: field_mod_video
 entity_type: paragraph
 bundle: video_bg_modifier
 label: 'Video background'
-description: 'Select a video to use as a background. YouTube is currently the only supported provider.'
+description: 'Select a video to use as a background. YouTube and Vimeo are currently the only supported providers.'
 required: false
 translatable: false
 default_value: {  }

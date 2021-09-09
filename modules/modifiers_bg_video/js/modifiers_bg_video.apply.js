@@ -43,32 +43,46 @@
       video.setAttribute('playsinline', '');
       element.parentNode.insertBefore(video, element.nextSibling);
 
+      var videoConfig = {
+        autoplay: true,
+        controls: false,
+        loop: true,
+        muted: true,
+        fluid: true,
+      };
+      var videoBgConfig = {
+        container: id,
+      };
+
       switch (config.provider) {
 
+        case 'vimeo':
+          videoConfig.techOrder = ['vimeo'];
+          videoConfig.sources = [{
+            type: 'video/vimeo',
+            src: 'https://vimeo.com/' + config.video,
+          }];
+          videoBgConfig.mediaType = 'Vimeo';
+          break;
+
         case 'youtube':
-          var configVideo = {
-            autoplay: true,
-            controls: false,
-            loop: true,
-            muted: true,
-            fluid: true,
-            techOrder: ['youtube'],
-            sources: [{
-              type: 'video/youtube',
-              src: 'https://www.youtube.com/embed/' + config.video
-            }],
-            youtube: {
-              disablekb: 1,
-              playsinline: 1
-            }
+          videoConfig.techOrder = ['youtube'];
+          videoConfig.sources = [{
+            type: 'video/youtube',
+            src: 'https://www.youtube.com/embed/' + config.video,
+          }];
+          videoConfig.youtube = {
+            disablekb: 1,
+            playsinline: 1,
           };
-          var configBackground = {
-            container: id,
-            mediaType: 'Youtube'
-          };
-          videojs(id + '-bg', configVideo).Background(configBackground);
+          videoBgConfig.mediaType = 'Youtube';
           break;
       }
+
+      videojs(id + '-bg', videoConfig);
+      setTimeout(function () {
+        videojs(id + '-bg').Background(videoBgConfig);
+      }, 1);
 
       var wrapper = element.querySelector('.videojs-background-wrap');
       if (!wrapper) {

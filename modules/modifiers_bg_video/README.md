@@ -2,8 +2,8 @@
 
 ## INTRODUCTION
 This module implements a Modifier which allows you to set background video.
-Currently the only supported provider is YouTube, but other providers
-can be added if there is support for them in VideoJS.
+Currently, the only supported providers are YouTube and Vimeo, but other
+providers can be added if there is support for them in VideoJS.
 
 Optionally you can set media queries.
 
@@ -16,10 +16,10 @@ more Modifiers to be included.
 4. Install required libraries by one of these 2 options:
 
 ### A. Library installation (manual)
-1. Download [VideoJS Youtube](https://github.com/videojs/videojs-youtube)
-library (version 2.6.0 is recommended).
-2. Download [VideoJS Background](https://github.com/matthojo/videojs-Background)
-library (version 1.0.7 is recommended).
+1. Download [VideoJS YouTube](https://github.com/videojs/videojs-youtube)
+library (version 2.6.1 is recommended).
+2. Download [VideoJS Vimeo](https://github.com/mobiliza/videojs-vimeo)
+library (version 0.6.0 is recommended).
 3. Place unpacked libraries in your libraries folder.
 
 ### B. Library installation (composer)
@@ -29,11 +29,11 @@ library (version 1.0.7 is recommended).
  {
   "type": "package",
   "package": {
-   "name": "matthojo/videojs-background",
-   "version": "1.0.7",
+   "name": "mobiliza/videojs-vimeo",
+   "version": "0.6.0",
    "dist": {
     "type": "zip",
-    "url": "https://github.com/matthojo/videojs-Background/archive/v1.0.7.zip"
+    "url": "https://github.com/mobiliza/videojs-vimeo/archive/0.6.0.zip"
    },
    "require": {
     "composer/installers": "~1.0"
@@ -45,10 +45,10 @@ library (version 1.0.7 is recommended).
   "type": "package",
   "package": {
    "name": "videojs/videojs-youtube",
-   "version": "2.6.0",
+   "version": "2.6.1",
    "dist": {
     "type": "zip",
-    "url": "https://github.com/videojs/videojs-youtube/archive/v2.6.0.zip"
+    "url": "https://github.com/videojs/videojs-youtube/archive/v2.6.1.zip"
    },
    "require": {
     "composer/installers": "~1.0"
@@ -68,7 +68,7 @@ library (version 1.0.7 is recommended).
 ```
 3. Run following command to download required libraries.
 ```
-composer require matthojo/videojs-background:^1.0 videojs/videojs-youtube:^2.0
+composer require mobiliza/videojs-vimeo:^0.6 videojs/videojs-youtube:^2.6
 ```
 
 ### Optional steps for better user experience

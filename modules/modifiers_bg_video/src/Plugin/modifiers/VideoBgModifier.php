@@ -33,16 +33,28 @@ class VideoBgModifier extends ModifierPluginBase {
         ];
         $provider_library = 'modifiers_bg_video/videojs_youtube';
       }
+      else {
+        preg_match('/^https?:\/\/(www\.)?vimeo\.com\/(.*\/)?(?<id>[0-9]+)/', $config['video'], $matches);
+
+        if (!empty($matches['id'])) {
+          $args = [
+            'provider' => 'vimeo',
+            'video' => $matches['id'],
+          ];
+          $provider_library = 'modifiers_bg_video/videojs_vimeo';
+          $css[$media][$selector . ' .vjs-vimeo'][] = 'width:100%';
+        }
+      }
 
       if (!empty($args)) {
         if (!empty($config['bgv_color_val'])) {
           $css[$media][$selector][] = 'background-color:' . $config['bgv_color_val'];
-          $css[$media][$selector][] = 'z-index:1';
         }
         if (!empty($config['bgv_image'])) {
           $args['image'] = $config['bgv_image'];
         }
         $css[$media][$selector][] = 'position:relative';
+        $css[$media][$selector][] = 'z-index:1';
         $css[$media][$selector . ' .videojs-background-wrap'][] = 'position:absolute;'
           . 'overflow:hidden;width:100%;height:100%;top:0;left:0;z-index:-998';
         $libraries = [
