@@ -1,0 +1,3 @@
+apply:
+  js:
+    js/modifiers_custom_radial_gradient.apply.js: { }

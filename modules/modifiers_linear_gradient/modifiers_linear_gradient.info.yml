@@ -1,7 +1,6 @@
 name: Linear Gradient Modifier
 type: module
 description: Provides a Modifier to set the linear gradient on an element using colors from library.
-core: 8.x
 core_version_requirement: ^8 || ^9
 package: Modifiers
 dependencies:

@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "image_fx_modifier",
  *   label = @Translation("Image FX Modifier"),
- *   description = @Translation("Provides a Modifier to set the image effects on an element"),
+ *   description = @Translation("Provides a Modifier to set the image effects on an element."),
  * )
  */
 class ImageFxModifier extends ModifierPluginBase {

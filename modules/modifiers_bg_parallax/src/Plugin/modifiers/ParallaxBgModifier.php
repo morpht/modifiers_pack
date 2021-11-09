@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "parallax_bg_modifier",
  *   label = @Translation("Parallax Background Modifier"),
- *   description = @Translation("Provides a Modifier to set the parallax background on an element"),
+ *   description = @Translation("Provides a Modifier to set the parallax background on an element."),
  * )
  */
 class ParallaxBgModifier extends ModifierPluginBase {
@@ -24,10 +24,16 @@ class ParallaxBgModifier extends ModifierPluginBase {
     if (!empty($config['parallax'])) {
       $media = parent::getMediaQuery($config);
 
-      $css[$media][$selector][] = 'background-image:url("' . $config['parallax'] . '")';
+      $args['image'] = $config['parallax'];
+
+      if (!empty($config['parallax_speed'])) {
+        $args['speed'] = (float) $config['parallax_speed'];
+      }
+      if (!empty($config['bgp_color_val'])) {
+        $args['color'] = $config['bgp_color_val'];
+      }
 
       $libraries = [
-        'modifiers_bg_parallax/parallax',
         'modifiers_bg_parallax/apply',
       ];
       $settings = [
@@ -35,17 +41,11 @@ class ParallaxBgModifier extends ModifierPluginBase {
         'callback' => 'apply',
         'selector' => $selector,
         'media' => $media,
-        'args' => [],
+        'args' => $args,
       ];
-      if (!empty($config['parallax_speed'])) {
-        $settings['args']['speed'] = floatval($config['parallax_speed']);
-      }
-      if (!empty($config['bgp_color_val'])) {
-        $css[$media][$selector][] = 'background-color:' . $config['bgp_color_val'];
-      }
       $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
-      return new Modification($css, $libraries, $settings, $attributes);
+      return new Modification([], $libraries, $settings, $attributes);
     }
     return NULL;
   }

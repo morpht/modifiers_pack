@@ -3,19 +3,19 @@
  * Initializes modification based on provided configuration.
  */
 
-(function (ParallaxBgModifier) {
+(function (CustomLinearGradientModifier) {
 
   'use strict';
 
-  ParallaxBgModifier.count = 0;
+  CustomLinearGradientModifier.count = 0;
 
-  ParallaxBgModifier.apply = function (context, selector, media, config) {
+  CustomLinearGradientModifier.apply = function (context, selector, media, config) {
 
     var element = context.querySelector(selector);
     if (!element) {
       return;
     }
-    var count = ParallaxBgModifier.count++;
+    var count = CustomLinearGradientModifier.count++;
 
     toggle(element, media, config, count);
 
@@ -28,10 +28,9 @@
   function toggle(element, media, config, count) {
 
     // Remove specific wrapper by counter, if exists.
-    var query = '.bg-parallax-wrap[data-count="' + count + '"]';
+    var query = '.custom-linear-gradient-wrap[data-count="' + count + '"]';
     var existing = element.querySelector(query);
     if (existing) {
-      jarallax(existing, 'destroy');
       existing.remove();
     }
 
@@ -39,7 +38,7 @@
 
       // Create a div as the background wrapper.
       var wrap = document.createElement('div');
-      wrap.setAttribute('class', 'bg-parallax-wrap');
+      wrap.setAttribute('class', 'custom-linear-gradient-wrap');
       wrap.setAttribute('data-count', count);
 
       // Stretch the wrapper across whole parent element.
@@ -51,21 +50,14 @@
       wrap.style.left = '0px';
       wrap.style.zIndex = '1';
 
-      var image = document.createElement('img');
-      image.setAttribute('src', config.image);
-      image.setAttribute('id', 'bg-parallax-image-' + count);
-      image.setAttribute('alt', '');
-      wrap.appendChild(image);
-
-      // Set background color and parallax.
-      if (typeof config.color !== 'undefined') {
-        wrap.style.backgroundColor = config.color;
+      // Set background based on colors.
+      if (config.colors.length > 1) {
+        wrap.style.backgroundImage = 'linear-gradient('
+          + config.direction + 'deg,' + config.colors.join() + ')';
       }
-      var pluginConfig = {
-        imgElement: '#' + 'bg-parallax-image-' + count,
-        speed: (typeof config.speed !== 'undefined' ? config.speed : 0.5),
-      };
-      jarallax(wrap, pluginConfig);
+      else {
+        wrap.style.backgroundColor = config.colors[0];
+      }
 
       // Append wrapper to the element.
       element.style.position = 'relative';
@@ -73,4 +65,4 @@
     }
   }
 
-})(window.ParallaxBgModifier = window.ParallaxBgModifier || {});
+})(window.CustomLinearGradientModifier = window.CustomLinearGradientModifier || {});

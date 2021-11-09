@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "linear_gradient_modifier",
  *   label = @Translation("Linear Gradient Modifier"),
- *   description = @Translation("Provides a Modifier to set the linear gradient on an element using colors from library"),
+ *   description = @Translation("Provides a Modifier to set the linear gradient on an element using colors from library."),
  * )
  */
 class LinearGradientModifier extends ModifierPluginBase {

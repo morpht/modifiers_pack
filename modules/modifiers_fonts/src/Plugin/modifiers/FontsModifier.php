@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "fonts_modifier",
  *   label = @Translation("Fonts Modifier"),
- *   description = @Translation("Provides a Modifier to set the fonts on an element"),
+ *   description = @Translation("Provides a Modifier to set the fonts on an element."),
  * )
  */
 class FontsModifier extends ModifierPluginBase {

@@ -1,10 +1,9 @@
 name: Relative Height Modifier
 type: module
-description: Provides a Modifier to set the relative height on an element.
-core: 8.x
+description: Modify a the relative height of content. The ratio is retained at all viewport sizes.
 core_version_requirement: ^8 || ^9
 package: Modifiers
 dependencies:
-  - modifiers:modifiers (>=8.x-1.2)
+  - modifiers:modifiers
   - paragraphs:paragraphs
   - drupal:options

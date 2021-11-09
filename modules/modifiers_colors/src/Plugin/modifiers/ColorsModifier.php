@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "colors_modifier",
  *   label = @Translation("Colors Modifier"),
- *   description = @Translation("Provides a Modifier to set the colors on an element"),
+ *   description = @Translation("Provides a Modifier to set the colors on an element."),
  * )
  */
 class ColorsModifier extends ModifierPluginBase {

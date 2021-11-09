@@ -30,8 +30,6 @@ class VideoBgModifierTest extends UnitTestCase {
       ],
     ];
     $expected_libraries_1 = [
-      'modifiers_bg_video/videojs',
-      'modifiers_bg_video/videojs_background',
       'modifiers_bg_video/apply',
       'modifiers_bg_video/videojs_youtube',
     ];

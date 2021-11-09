@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "radial_gradient_modifier",
  *   label = @Translation("Radial Gradient Modifier"),
- *   description = @Translation("Provides a Modifier to set the radial gradient on an element using colors from library"),
+ *   description = @Translation("Provides a Modifier to set the radial gradient on an element using colors from library."),
  * )
  */
 class RadialGradientModifier extends ModifierPluginBase {

@@ -16,7 +16,7 @@ Paragraph) or onto a field on a Look.
 
 ### A. Library installation (manual)
 1. Download [Jarallax](https://github.com/nk-o/jarallax) library
-(version 1.10.7 is recommended).
+(version 1.12.4 is recommended).
 2. Place unpacked library in your libraries folder.
 
 ### B. Library installation (composer)
@@ -27,10 +27,10 @@ Paragraph) or onto a field on a Look.
   "type": "package",
   "package": {
    "name": "nk-o/jarallax",
-   "version": "1.10.7",
+   "version": "1.12.4",
    "dist": {
     "type": "zip",
-    "url": "https://github.com/nk-o/jarallax/archive/v1.10.7.zip"
+    "url": "https://github.com/nk-o/jarallax/archive/v1.12.4.zip"
    },
    "require": {
     "composer/installers": "~1.0"

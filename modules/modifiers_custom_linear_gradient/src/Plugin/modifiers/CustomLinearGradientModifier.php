@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "custom_linear_gradient_modifier",
  *   label = @Translation("Custom Linear Gradient Modifier"),
- *   description = @Translation("Provides a Modifier to set the linear gradient on an element using custom colors"),
+ *   description = @Translation("Provides a Modifier to set the linear gradient on an element using custom colors."),
  * )
  */
 class CustomLinearGradientModifier extends ModifierPluginBase {
@@ -21,24 +21,30 @@ class CustomLinearGradientModifier extends ModifierPluginBase {
    */
   public static function modification($selector, array $config) {
 
-    if (!empty($config['cl_gradient_colors'])) {
+    if (!empty($config['cl_gradient_direction'])) {
       $media = parent::getMediaQuery($config);
-      $direction = '';
 
-      if (!empty($config['cl_gradient_direction'])) {
-        $direction = $config['cl_gradient_direction'] . 'deg,';
+      $args['direction'] = (float) $config['cl_gradient_direction'];
+      $args['colors'] = [];
+
+      if (!empty($config['cl_gradient_colors'])) {
+        $args['colors'] = $config['cl_gradient_colors'];
       }
-      // If there is only one color specified we use single color fill.
-      if (count($config['cl_gradient_colors']) === 1) {
-        $css[$media][$selector][] = 'background:' . $config['cl_gradient_colors'][0];
-      }
-      else {
-        $css[$media][$selector][] = 'background:linear-gradient('
-          . $direction . implode(',', $config['cl_gradient_colors']) . ')';
-      }
+
+      $libraries = [
+        'modifiers_custom_linear_gradient/apply',
+      ];
+
+      $settings = [
+        'namespace' => 'CustomLinearGradientModifier',
+        'callback' => 'apply',
+        'selector' => $selector,
+        'media' => $media,
+        'args' => $args,
+      ];
       $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
-      return new Modification($css, [], [], $attributes);
+      return new Modification([], $libraries, $settings, $attributes);
     }
     return NULL;
   }

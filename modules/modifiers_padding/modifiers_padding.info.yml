@@ -1,7 +1,6 @@
 name: Padding Modifier
 type: module
-description: Provides a Modifier to set the padding on an element.
-core: 8.x
+description: Modify content so that it has extra padding.
 core_version_requirement: ^8 || ^9
 package: Modifiers
 dependencies:

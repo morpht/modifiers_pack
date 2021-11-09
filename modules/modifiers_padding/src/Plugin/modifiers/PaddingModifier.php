@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "padding_modifier",
  *   label = @Translation("Padding Modifier"),
- *   description = @Translation("Provides a Modifier to set the padding on an element"),
+ *   description = @Translation("Provides a Modifier to set the padding on an element."),
  * )
  */
 class PaddingModifier extends ModifierPluginBase {

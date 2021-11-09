@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "hide_modifier",
  *   label = @Translation("Hide Modifier"),
- *   description = @Translation("Provides a Modifier to hide an element"),
+ *   description = @Translation("Provides a Modifier to hide an element."),
  * )
  */
 class HideModifier extends ModifierPluginBase {

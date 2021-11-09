@@ -27,7 +27,6 @@ class ParallaxBgModifierTest extends UnitTestCase {
       ],
     ];
     $expected_libraries_1 = [
-      'modifiers_bg_parallax/parallax',
       'modifiers_bg_parallax/apply',
     ];
     $expected_settings_1 = [
@@ -65,7 +64,6 @@ class ParallaxBgModifierTest extends UnitTestCase {
       ],
     ];
     $expected_libraries_2 = [
-      'modifiers_bg_parallax/parallax',
       'modifiers_bg_parallax/apply',
     ];
     $expected_settings_2 = [

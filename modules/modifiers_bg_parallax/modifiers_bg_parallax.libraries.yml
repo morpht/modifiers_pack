@@ -1,13 +1,15 @@
 parallax:
   remote: https://github.com/nk-o/jarallax
-  version: 1.10.7
+  version: 1.12.4
   license:
     name: MIT
     url: https://github.com/nk-o/jarallax/blob/master/LICENSE
     gpl-compatible: true
   js:
-    /libraries/jarallax/dist/jarallax.min.js: {}
+    /libraries/jarallax/dist/jarallax.min.js: { }
 
 apply:
   js:
-    js/modifiers_bg_parallax.apply.js: {}
+    js/modifiers_bg_parallax.apply.js: { }
+  dependencies:
+    - modifiers_bg_parallax/parallax

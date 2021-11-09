@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "image_bg_modifier",
  *   label = @Translation("Image Background Modifier"),
- *   description = @Translation("Provides a Modifier to set the image background on an element"),
+ *   description = @Translation("Provides a Modifier to set the image background on an element."),
  * )
  */
 class ImageBgModifier extends ModifierPluginBase {
@@ -24,34 +24,44 @@ class ImageBgModifier extends ModifierPluginBase {
     if (!empty($config['image'])) {
       $media = parent::getMediaQuery($config);
 
-      $css[$media][$selector][] = 'background-image:url("' . $config['image'] . '")';
-      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
+      $args['image'] = $config['image'];
 
       if (!empty($config['image_style'])) {
 
         switch ($config['image_style']) {
 
           case 'stretch':
-            $css[$media][$selector][] = 'background-size:cover';
+            $args['size'] = 'cover';
             break;
 
           case 'no-repeat':
           case 'repeat':
           case 'repeat-x':
           case 'repeat-y':
-            $css[$media][$selector][] = 'background-repeat:' . $config['image_style'];
+            $args['repeat'] = $config['image_style'];
             break;
         }
       }
       if (!empty($config['image_position'])) {
-        $position = str_replace('-', ' ', $config['image_position']);
-        $css[$media][$selector][] = 'background-position:' . $position;
+        $args['position'] = str_replace('-', ' ', $config['image_position']);
       }
       if (!empty($config['bgi_color_val'])) {
-        $css[$media][$selector][] = 'background-color:' . $config['bgi_color_val'];
+        $args['color'] = $config['bgi_color_val'];
       }
 
-      return new Modification($css, [], [], $attributes);
+      $libraries = [
+        'modifiers_bg_image/apply',
+      ];
+      $settings = [
+        'namespace' => 'ImageBgModifier',
+        'callback' => 'apply',
+        'selector' => $selector,
+        'media' => $media,
+        'args' => $args,
+      ];
+      $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
+
+      return new Modification([], $libraries, $settings, $attributes);
     }
     return NULL;
   }

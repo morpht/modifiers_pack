@@ -1,7 +1,6 @@
 name: Image Background Modifier
 type: module
-description: Provides a Modifier to set the image background on an element.
-core: 8.x
+description: Modify the content to have a background image.
 core_version_requirement: ^8 || ^9
 package: Modifiers
 dependencies:

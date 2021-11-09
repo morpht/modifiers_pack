@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "video_bg_modifier",
  *   label = @Translation("Video Background Modifier"),
- *   description = @Translation("Provides a Modifier to set the video background on an element"),
+ *   description = @Translation("Provides a Modifier to set the video background on an element."),
  * )
  */
 class VideoBgModifier extends ModifierPluginBase {
@@ -58,8 +58,6 @@ class VideoBgModifier extends ModifierPluginBase {
         $css[$media][$selector . ' .videojs-background-wrap'][] = 'position:absolute;'
           . 'overflow:hidden;width:100%;height:100%;top:0;left:0;z-index:-998';
         $libraries = [
-          'modifiers_bg_video/videojs',
-          'modifiers_bg_video/videojs_background',
           'modifiers_bg_video/apply',
         ];
         if (!empty($provider_library)) {

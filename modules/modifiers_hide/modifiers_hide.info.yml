@@ -1,7 +1,6 @@
 name: Hide Modifier
 type: module
-description: Provides a Modifier to hide an element.
-core: 8.x
+description: Modify the content so that it is hidden.
 core_version_requirement: ^8 || ^9
 package: Modifiers
 dependencies:

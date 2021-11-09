@@ -1,7 +1,6 @@
 name: Fonts Modifier
 type: module
-description: Provides a Modifier to set the fonts on an element.
-core: 8.x
+description: Modify various aspect of the font across base elements.
 core_version_requirement: ^8 || ^9
 package: Modifiers
 dependencies:

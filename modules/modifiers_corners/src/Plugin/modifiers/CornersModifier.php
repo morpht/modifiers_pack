@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "corners_modifier",
  *   label = @Translation("Corners Modifier"),
- *   description = @Translation("Provides a Modifier to set the corners on an element"),
+ *   description = @Translation("Provides a Modifier to set the corners on an element."),
  * )
  */
 class CornersModifier extends ModifierPluginBase {

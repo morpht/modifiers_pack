@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "relative_height_modifier",
  *   label = @Translation("Relative Height Modifier"),
- *   description = @Translation("Provides a Modifier to set the relative height on an element"),
+ *   description = @Translation("Provides a Modifier to set the relative height on an element."),
  * )
  */
 class RelativeHeightModifier extends ModifierPluginBase {

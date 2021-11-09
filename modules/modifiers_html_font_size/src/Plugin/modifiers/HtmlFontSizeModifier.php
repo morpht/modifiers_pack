@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "html_font_size_modifier",
  *   label = @Translation("HTML Font Size Modifier"),
- *   description = @Translation("Provides a Modifier to set the HTML font size on an element"),
+ *   description = @Translation("Provides a Modifier to set the HTML font size on an element."),
  * )
  */
 class HtmlFontSizeModifier extends ModifierPluginBase {

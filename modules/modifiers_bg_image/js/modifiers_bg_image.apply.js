@@ -3,19 +3,19 @@
  * Initializes modification based on provided configuration.
  */
 
-(function (ParallaxBgModifier) {
+(function (ImageBgModifier) {
 
   'use strict';
 
-  ParallaxBgModifier.count = 0;
+  ImageBgModifier.count = 0;
 
-  ParallaxBgModifier.apply = function (context, selector, media, config) {
+  ImageBgModifier.apply = function (context, selector, media, config) {
 
     var element = context.querySelector(selector);
     if (!element) {
       return;
     }
-    var count = ParallaxBgModifier.count++;
+    var count = ImageBgModifier.count++;
 
     toggle(element, media, config, count);
 
@@ -28,10 +28,9 @@
   function toggle(element, media, config, count) {
 
     // Remove specific wrapper by counter, if exists.
-    var query = '.bg-parallax-wrap[data-count="' + count + '"]';
+    var query = '.bg-image-wrap[data-count="' + count + '"]';
     var existing = element.querySelector(query);
     if (existing) {
-      jarallax(existing, 'destroy');
       existing.remove();
     }
 
@@ -39,7 +38,7 @@
 
       // Create a div as the background wrapper.
       var wrap = document.createElement('div');
-      wrap.setAttribute('class', 'bg-parallax-wrap');
+      wrap.setAttribute('class', 'bg-image-wrap');
       wrap.setAttribute('data-count', count);
 
       // Stretch the wrapper across whole parent element.
@@ -51,21 +50,20 @@
       wrap.style.left = '0px';
       wrap.style.zIndex = '1';
 
-      var image = document.createElement('img');
-      image.setAttribute('src', config.image);
-      image.setAttribute('id', 'bg-parallax-image-' + count);
-      image.setAttribute('alt', '');
-      wrap.appendChild(image);
-
-      // Set background color and parallax.
+      // Set background properties.
+      wrap.style.backgroundImage = 'url("' + config.image + '")';
+      if (typeof config.size !== 'undefined') {
+        wrap.style.backgroundSize = config.size;
+      }
+      if (typeof config.repeat !== 'undefined') {
+        wrap.style.backgroundRepeat = config.repeat;
+      }
+      if (typeof config.position !== 'undefined') {
+        wrap.style.backgroundPosition = config.position;
+      }
       if (typeof config.color !== 'undefined') {
         wrap.style.backgroundColor = config.color;
       }
-      var pluginConfig = {
-        imgElement: '#' + 'bg-parallax-image-' + count,
-        speed: (typeof config.speed !== 'undefined' ? config.speed : 0.5),
-      };
-      jarallax(wrap, pluginConfig);
 
       // Append wrapper to the element.
       element.style.position = 'relative';
@@ -73,4 +71,4 @@
     }
   }
 
-})(window.ParallaxBgModifier = window.ParallaxBgModifier || {});
+})(window.ImageBgModifier = window.ImageBgModifier || {});

@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "shadow_modifier",
  *   label = @Translation("Shadow Modifier"),
- *   description = @Translation("Provides a Modifier to set the shadow on an element"),
+ *   description = @Translation("Provides a Modifier to set the shadow on an element."),
  * )
  */
 class ShadowModifier extends ModifierPluginBase {

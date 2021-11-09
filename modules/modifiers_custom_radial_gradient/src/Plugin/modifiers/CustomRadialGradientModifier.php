@@ -11,7 +11,7 @@ use Drupal\modifiers\ModifierPluginBase;
  * @Modifier(
  *   id = "custom_radial_gradient_modifier",
  *   label = @Translation("Custom Radial Gradient Modifier"),
- *   description = @Translation("Provides a Modifier to set the radial gradient on an element using custom colors"),
+ *   description = @Translation("Provides a Modifier to set the radial gradient on an element using custom colors."),
  * )
  */
 class CustomRadialGradientModifier extends ModifierPluginBase {
@@ -23,35 +23,39 @@ class CustomRadialGradientModifier extends ModifierPluginBase {
 
     if (!empty($config['cr_gradient_colors'])) {
       $media = parent::getMediaQuery($config);
-      $shape = 'ellipse';
-      $size = 'farthest-corner';
-      $position_x = '50';
-      $position_y = '50';
+
+      $args['colors'] = $config['cr_gradient_colors'];
+      $args['shape'] = 'ellipse';
+      $args['size'] = 'farthest-corner';
+      $args['x'] = 50;
+      $args['y'] = 50;
 
       if (!empty($config['cr_gradient_shape'])) {
-        $shape = $config['cr_gradient_shape'];
+        $args['shape'] = $config['cr_gradient_shape'];
       }
       if (!empty($config['cr_gradient_size'])) {
-        $size = $config['cr_gradient_size'];
+        $args['size'] = $config['cr_gradient_size'];
       }
       if (!empty($config['cr_gradient_position'][0])) {
-        $position_x = $config['cr_gradient_position'][0];
+        $args['x'] = (float) $config['cr_gradient_position'][0];
       }
       if (!empty($config['cr_gradient_position'][1])) {
-        $position_y = $config['cr_gradient_position'][1];
+        $args['y'] = (float) $config['cr_gradient_position'][1];
       }
-      // If there is only one color specified we use single color fill.
-      if (count($config['cr_gradient_colors']) === 1) {
-        $css[$media][$selector][] = 'background:' . $config['cr_gradient_colors'][0];
-      }
-      else {
-        $css[$media][$selector][] = 'background:radial-gradient('
-          . $shape . ' ' . $size . ' at ' . $position_x . '% ' . $position_y . '%,'
-          . implode(',', $config['cr_gradient_colors']) . ')';
-      }
+
+      $libraries = [
+        'modifiers_custom_radial_gradient/apply',
+      ];
+      $settings = [
+        'namespace' => 'CustomRadialGradientModifier',
+        'callback' => 'apply',
+        'selector' => $selector,
+        'media' => $media,
+        'args' => $args,
+      ];
       $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
-      return new Modification($css, [], [], $attributes);
+      return new Modification([], $libraries, $settings, $attributes);
     }
     return NULL;
   }
