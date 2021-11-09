@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_dt_scroll_collapse
+    - paragraphs.paragraphs_type.datatables_modifier
+id: paragraph.datatables_modifier.field_mod_dt_scroll_collapse
+field_name: field_mod_dt_scroll_collapse
+entity_type: paragraph
+bundle: datatables_modifier
+label: 'Scroll Collapse'
+description: 'Collapse the height if less than the defined height.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

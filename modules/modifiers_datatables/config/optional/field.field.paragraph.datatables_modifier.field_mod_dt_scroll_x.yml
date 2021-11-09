@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_dt_scroll_x
+    - paragraphs.paragraphs_type.datatables_modifier
+id: paragraph.datatables_modifier.field_mod_dt_scroll_x
+field_name: field_mod_dt_scroll_x
+entity_type: paragraph
+bundle: datatables_modifier
+label: 'Scroll x'
+description: 'Enable horizontal scrolling.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

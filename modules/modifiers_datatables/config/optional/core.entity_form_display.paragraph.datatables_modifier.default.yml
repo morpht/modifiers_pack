@@ -1,0 +1,87 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.datatables_modifier.field_mod_dt_length_menu
+    - field.field.paragraph.datatables_modifier.field_mod_dt_nowrap
+    - field.field.paragraph.datatables_modifier.field_mod_dt_ordering
+    - field.field.paragraph.datatables_modifier.field_mod_dt_paging
+    - field.field.paragraph.datatables_modifier.field_mod_dt_scroll_collapse
+    - field.field.paragraph.datatables_modifier.field_mod_dt_scroll_x
+    - field.field.paragraph.datatables_modifier.field_mod_dt_scroll_y
+    - field.field.paragraph.datatables_modifier.field_mod_dt_searching
+    - field.field.paragraph.datatables_modifier.field_mod_media_query
+    - paragraphs.paragraphs_type.datatables_modifier
+id: paragraph.datatables_modifier.default
+targetEntityType: paragraph
+bundle: datatables_modifier
+mode: default
+content:
+  field_mod_dt_length_menu:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_mod_dt_nowrap:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_mod_dt_ordering:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_mod_dt_paging:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_mod_dt_scroll_collapse:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_mod_dt_scroll_x:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_mod_dt_scroll_y:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mod_dt_searching:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_mod_media_query:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

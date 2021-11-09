@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: datatables_modifier
+label: 'DataTables Modifier'
+icon_uuid: null
+description: 'Modify an HTML table to be displayed as a Datatable, allowing filtering, paging and sorting.'
+behavior_plugins: {  }

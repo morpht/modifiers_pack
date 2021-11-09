@@ -1,0 +1,21 @@
+datatables:
+  remote: https://github.com/DataTables/DataTables
+  version: 1.10.21
+  license:
+    name: MIT
+    url: https://github.com/DataTables/DataTables/blob/master/license.txt
+    gpl-compatible: true
+  css:
+    theme:
+      libraries/datatables/media/css/dataTables.bootstrap4.min.css: { }
+  js:
+    /libraries/datatables/media/js/jquery.dataTables.min.js: { }
+    /libraries/datatables/media/js/dataTables.bootstrap4.min.js: { }
+  dependencies:
+    - core/jquery
+
+apply:
+  js:
+    js/modifiers_datatables.apply.js: { }
+  dependencies:
+    - modifiers_datatables/datatables

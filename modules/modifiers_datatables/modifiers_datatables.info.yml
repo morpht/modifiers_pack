@@ -1,0 +1,9 @@
+name: DataTables Modifier
+type: module
+description: Modify an HTML table to be displayed as a Datatable, allowing filtering, paging and sorting.
+core_version_requirement: ^8 || ^9
+package: Modifiers
+dependencies:
+  - modifiers:modifiers
+  - paragraphs:paragraphs
+  - drupal:options

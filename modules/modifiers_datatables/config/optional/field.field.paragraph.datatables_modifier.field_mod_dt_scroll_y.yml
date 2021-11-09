@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_dt_scroll_y
+    - paragraphs.paragraphs_type.datatables_modifier
+id: paragraph.datatables_modifier.field_mod_dt_scroll_y
+field_name: field_mod_dt_scroll_y
+entity_type: paragraph
+bundle: datatables_modifier
+label: 'Scroll y'
+description: 'Define the height in absolute or relative units, eg. 300px, 50vh.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

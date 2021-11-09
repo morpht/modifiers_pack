@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_dt_paging
+    - paragraphs.paragraphs_type.datatables_modifier
+id: paragraph.datatables_modifier.field_mod_dt_paging
+field_name: field_mod_dt_paging
+entity_type: paragraph
+bundle: datatables_modifier
+label: Paging
+description: 'Page the table.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
