@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_sr_seq_selector
+    - paragraphs.paragraphs_type.scroll_reveal_modifier
+id: paragraph.scroll_reveal_modifier.field_mod_sr_seq_selector
+field_name: field_mod_sr_seq_selector
+entity_type: paragraph
+bundle: scroll_reveal_modifier
+label: 'Sequence Selector'
+description: 'The child selector to select the items contained in the object.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

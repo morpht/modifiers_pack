@@ -1,0 +1,87 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.scroll_reveal_modifier.field_mod_sr_delay
+    - field.field.paragraph.scroll_reveal_modifier.field_mod_sr_distance
+    - field.field.paragraph.scroll_reveal_modifier.field_mod_sr_duration
+    - field.field.paragraph.scroll_reveal_modifier.field_mod_sr_mobile
+    - field.field.paragraph.scroll_reveal_modifier.field_mod_sr_opacity
+    - field.field.paragraph.scroll_reveal_modifier.field_mod_sr_origin
+    - field.field.paragraph.scroll_reveal_modifier.field_mod_sr_scale
+    - field.field.paragraph.scroll_reveal_modifier.field_mod_sr_seq_interval
+    - field.field.paragraph.scroll_reveal_modifier.field_mod_sr_seq_selector
+    - paragraphs.paragraphs_type.scroll_reveal_modifier
+id: paragraph.scroll_reveal_modifier.default
+targetEntityType: paragraph
+bundle: scroll_reveal_modifier
+mode: default
+content:
+  field_mod_sr_delay:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_mod_sr_distance:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mod_sr_duration:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_mod_sr_mobile:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_mod_sr_opacity:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_mod_sr_origin:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mod_sr_scale:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_mod_sr_seq_interval:
+    weight: 12
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_mod_sr_seq_selector:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

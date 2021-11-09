@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: clip_path_modifier
+label: 'Clip Path Modifier'
+icon_uuid: null
+description: 'Modify a component so that it is clipped.'
+behavior_plugins: {  }

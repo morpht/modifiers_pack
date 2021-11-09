@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_sr_distance
+    - paragraphs.paragraphs_type.scroll_reveal_modifier
+id: paragraph.scroll_reveal_modifier.field_mod_sr_distance
+field_name: field_mod_sr_distance
+entity_type: paragraph
+bundle: scroll_reveal_modifier
+label: Distance
+description: 'The starting displacement distance (e.g. 100%, 50px). Default: "20px".'
+required: false
+translatable: false
+default_value:
+  -
+    value: 20px
+default_value_callback: ''
+settings: {  }
+field_type: string

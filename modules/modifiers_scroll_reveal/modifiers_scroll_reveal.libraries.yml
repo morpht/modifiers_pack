@@ -1,0 +1,15 @@
+scroll_reveal:
+  remote: https://scrollrevealjs.org
+  version: 4.0.7
+  license:
+    name: MIT
+    url: https://github.com/jlmakes/scrollreveal/blob/master/LICENSE.md
+    gpl-compatible: true
+  js:
+    /libraries/scrollreveal/dist/scrollreveal.min.js: { }
+
+apply:
+  js:
+    js/modifiers_scroll_reveal.apply.js: { }
+  dependencies:
+    - modifiers_scroll_reveal/scroll_reveal

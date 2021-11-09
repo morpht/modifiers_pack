@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_sr_origin
+    - paragraphs.paragraphs_type.scroll_reveal_modifier
+  module:
+    - options
+id: paragraph.scroll_reveal_modifier.field_mod_sr_origin
+field_name: field_mod_sr_origin
+entity_type: paragraph
+bundle: scroll_reveal_modifier
+label: Origin
+description: 'The direction the object moves from. Default: "bottom".'
+required: false
+translatable: false
+default_value:
+  -
+    value: bottom
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,8 @@
+name: Color Background Modifier
+type: module
+description: Modify a background color.
+core_version_requirement: ^8 || ^9
+package: Modifiers
+dependencies:
+  - modifiers:modifiers
+  - paragraphs:paragraphs

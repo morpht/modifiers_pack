@@ -1,0 +1,8 @@
+name: Clip Path Modifier
+type: module
+description: Modify a component so that it is clipped.
+core_version_requirement: ^8 || ^9
+package: Modifiers
+dependencies:
+  - modifiers:modifiers
+  - paragraphs:paragraphs

@@ -1,0 +1,9 @@
+name: Scroll Reveal Modifier
+type: module
+description: Modify content and items so that they are revealed depending on the scroll position of the page.
+core_version_requirement: ^8 || ^9
+package: Modifiers
+dependencies:
+  - modifiers:modifiers
+  - paragraphs:paragraphs
+  - drupal:options

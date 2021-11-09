@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.adaptive_height_modifier.field_mod_ah_comparison
+    - field.field.paragraph.adaptive_height_modifier.field_mod_ah_limit
+    - field.field.paragraph.adaptive_height_modifier.field_mod_ah_ratio
+    - field.field.paragraph.adaptive_height_modifier.field_mod_media_query
+    - field.field.paragraph.adaptive_height_modifier.field_mod_vertical_align
+    - paragraphs.paragraphs_type.adaptive_height_modifier
+id: paragraph.adaptive_height_modifier.default
+targetEntityType: paragraph
+bundle: adaptive_height_modifier
+mode: default
+content:
+  field_mod_ah_comparison:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mod_ah_limit:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_mod_ah_ratio:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_mod_media_query:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mod_vertical_align:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

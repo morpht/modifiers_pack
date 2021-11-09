@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_clip_path
+    - paragraphs.paragraphs_type.clip_path_modifier
+id: paragraph.clip_path_modifier.field_mod_clip_path
+field_name: field_mod_clip_path
+entity_type: paragraph
+bundle: clip_path_modifier
+label: 'Clip path'
+description: 'Add a CSS definition for the clipping path (just the part after ":"). Clip path generator can be found here: https://bennettfeely.com/clippy/.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_sr_mobile
+    - paragraphs.paragraphs_type.scroll_reveal_modifier
+id: paragraph.scroll_reveal_modifier.field_mod_sr_mobile
+field_name: field_mod_sr_mobile
+entity_type: paragraph
+bundle: scroll_reveal_modifier
+label: Mobile
+description: 'Display on Mobile.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

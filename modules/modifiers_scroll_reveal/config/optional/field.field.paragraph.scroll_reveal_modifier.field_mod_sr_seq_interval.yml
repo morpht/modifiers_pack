@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_sr_seq_interval
+    - paragraphs.paragraphs_type.scroll_reveal_modifier
+id: paragraph.scroll_reveal_modifier.field_mod_sr_seq_interval
+field_name: field_mod_sr_seq_interval
+entity_type: paragraph
+bundle: scroll_reveal_modifier
+label: 'Sequence Interval'
+description: 'The time in milliseconds between items displaying.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ms
+field_type: integer

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_ah_comparison
+    - paragraphs.paragraphs_type.adaptive_height_modifier
+  module:
+    - options
+id: paragraph.adaptive_height_modifier.field_mod_ah_comparison
+field_name: field_mod_ah_comparison
+entity_type: paragraph
+bundle: adaptive_height_modifier
+label: Comparison
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: content_width
+default_value_callback: ''
+settings: {  }
+field_type: list_string

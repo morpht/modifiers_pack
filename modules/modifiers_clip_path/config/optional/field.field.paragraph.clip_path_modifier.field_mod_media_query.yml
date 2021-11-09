@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_media_query
+    - paragraphs.paragraphs_type.clip_path_modifier
+id: paragraph.clip_path_modifier.field_mod_media_query
+field_name: field_mod_media_query
+entity_type: paragraph
+bundle: clip_path_modifier
+label: 'Media Query'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

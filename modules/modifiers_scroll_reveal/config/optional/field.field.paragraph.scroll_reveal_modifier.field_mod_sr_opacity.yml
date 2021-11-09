@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_sr_opacity
+    - paragraphs.paragraphs_type.scroll_reveal_modifier
+id: paragraph.scroll_reveal_modifier.field_mod_sr_opacity
+field_name: field_mod_sr_opacity
+entity_type: paragraph
+bundle: scroll_reveal_modifier
+label: Opacity
+description: 'The starting opacity (0.00 - 1.00). Default: "0".'
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

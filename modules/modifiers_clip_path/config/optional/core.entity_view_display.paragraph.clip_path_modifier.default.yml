@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.clip_path_modifier.field_mod_clip_path
+    - field.field.paragraph.clip_path_modifier.field_mod_media_query
+    - paragraphs.paragraphs_type.clip_path_modifier
+id: paragraph.clip_path_modifier.default
+targetEntityType: paragraph
+bundle: clip_path_modifier
+mode: default
+content:
+  field_mod_clip_path:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mod_media_query:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

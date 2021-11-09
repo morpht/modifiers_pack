@@ -1,0 +1,9 @@
+name: Adaptive Height Modifier
+type: module
+description: Modify a relative height so that it adapts to the viewport.
+core_version_requirement: ^8 || ^9
+package: Modifiers
+dependencies:
+  - modifiers:modifiers
+  - paragraphs:paragraphs
+  - drupal:options

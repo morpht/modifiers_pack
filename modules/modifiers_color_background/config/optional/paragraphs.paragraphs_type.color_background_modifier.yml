@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: color_background_modifier
+label: 'Colour Background Modifier'
+icon_uuid: null
+description: 'Modify a background color.'
+behavior_plugins: {  }

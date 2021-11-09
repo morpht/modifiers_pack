@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mod_sr_duration
+    - paragraphs.paragraphs_type.scroll_reveal_modifier
+id: paragraph.scroll_reveal_modifier.field_mod_sr_duration
+field_name: field_mod_sr_duration
+entity_type: paragraph
+bundle: scroll_reveal_modifier
+label: Duration
+description: 'The duration time in milliseconds of the animation. Default: "500".'
+required: false
+translatable: false
+default_value:
+  -
+    value: 500
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ms
+field_type: integer

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: scroll_reveal_modifier
+label: 'Scroll Reveal Modifier'
+icon_uuid: null
+description: 'Modify content and items so that they are revealed depending on the scroll position of the page.'
+behavior_plugins: {  }
