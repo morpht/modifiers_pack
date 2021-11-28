@@ -31,10 +31,11 @@ class CustomLinearGradientModifier extends ModifierPluginBase {
         $args['colors'] = $config['cl_gradient_colors'];
       }
 
+      $css[$media][$selector . ' > *'][] = 'position:relative';
+      $css[$media][$selector . ' > *'][] = 'z-index:2';
       $libraries = [
         'modifiers_custom_linear_gradient/apply',
       ];
-
       $settings = [
         'namespace' => 'CustomLinearGradientModifier',
         'callback' => 'apply',
@@ -44,7 +45,7 @@ class CustomLinearGradientModifier extends ModifierPluginBase {
       ];
       $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
-      return new Modification([], $libraries, $settings, $attributes);
+      return new Modification($css, $libraries, $settings, $attributes);
     }
     return NULL;
   }

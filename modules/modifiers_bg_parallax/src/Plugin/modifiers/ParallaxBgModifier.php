@@ -33,6 +33,8 @@ class ParallaxBgModifier extends ModifierPluginBase {
         $args['color'] = $config['bgp_color_val'];
       }
 
+      $css[$media][$selector . ' > *'][] = 'position:relative';
+      $css[$media][$selector . ' > *'][] = 'z-index:2';
       $libraries = [
         'modifiers_bg_parallax/apply',
       ];
@@ -45,7 +47,7 @@ class ParallaxBgModifier extends ModifierPluginBase {
       ];
       $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
-      return new Modification([], $libraries, $settings, $attributes);
+      return new Modification($css, $libraries, $settings, $attributes);
     }
     return NULL;
   }

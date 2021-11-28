@@ -39,6 +39,8 @@ class ColorBackgroundModifier extends ModifierPluginBase {
     }
 
     if (!empty($args)) {
+      $css[$media][$selector . ' > *'][] = 'position:relative';
+      $css[$media][$selector . ' > *'][] = 'z-index:2';
       $libraries = [
         'modifiers_color_background/apply',
       ];
@@ -50,7 +52,7 @@ class ColorBackgroundModifier extends ModifierPluginBase {
         'args' => $args,
       ];
 
-      return new Modification([], $libraries, $settings, $attributes);
+      return new Modification($css, $libraries, $settings, $attributes);
     }
     return NULL;
   }

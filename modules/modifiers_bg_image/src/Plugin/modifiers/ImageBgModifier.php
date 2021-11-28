@@ -49,6 +49,8 @@ class ImageBgModifier extends ModifierPluginBase {
         $args['color'] = $config['bgi_color_val'];
       }
 
+      $css[$media][$selector . ' > *'][] = 'position:relative';
+      $css[$media][$selector . ' > *'][] = 'z-index:2';
       $libraries = [
         'modifiers_bg_image/apply',
       ];
@@ -61,7 +63,7 @@ class ImageBgModifier extends ModifierPluginBase {
       ];
       $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
-      return new Modification([], $libraries, $settings, $attributes);
+      return new Modification($css, $libraries, $settings, $attributes);
     }
     return NULL;
   }

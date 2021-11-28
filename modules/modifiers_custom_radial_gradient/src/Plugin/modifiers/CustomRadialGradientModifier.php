@@ -43,6 +43,8 @@ class CustomRadialGradientModifier extends ModifierPluginBase {
         $args['y'] = (float) $config['cr_gradient_position'][1];
       }
 
+      $css[$media][$selector . ' > *'][] = 'position:relative';
+      $css[$media][$selector . ' > *'][] = 'z-index:2';
       $libraries = [
         'modifiers_custom_radial_gradient/apply',
       ];
@@ -55,7 +57,7 @@ class CustomRadialGradientModifier extends ModifierPluginBase {
       ];
       $attributes[$media][$selector]['class'][] = 'modifiers-has-background';
 
-      return new Modification([], $libraries, $settings, $attributes);
+      return new Modification($css, $libraries, $settings, $attributes);
     }
     return NULL;
   }
