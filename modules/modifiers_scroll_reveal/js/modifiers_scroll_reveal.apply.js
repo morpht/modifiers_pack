@@ -10,9 +10,11 @@
   ScrollRevealModifier.apply = function (context, selector, media, config) {
 
     var element = context.querySelector(selector);
-    if (!element) {
+    if (!element || window.scroll_was_run) {
       return;
     }
+
+    window.scroll_was_run = true;
 
     var pluginConfig = {
       origin: (typeof config.origin !== 'undefined' ? config.origin : 'bottom'),
